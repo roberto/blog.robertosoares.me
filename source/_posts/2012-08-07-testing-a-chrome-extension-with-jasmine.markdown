@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Testing Chrome Extensions with Jasmine"
-date: 2012-08-08 10:51
+date: 2012-08-08 16:31
 comments: true
 categories: Testing
 ---
@@ -20,7 +20,7 @@ This weekend I wrote a chrome extension for [Gist.IO][gistio], a nice blog writi
 
 ## Specs, Expectations, Matchers, Setup and Teardown
 
-After I read a few paragraphs of its [well styled documentation][jasmine-docs], I got everything that I need to start to write some specs. As I'm used to [RSpec][rspec] DSL, it was even easier.
+After I read a few paragraphs of the [well styled documentation][jasmine-docs], I got everything that I needed to start writing some specs. As I'm used to [RSpec][rspec] DSL, it was even easier.
 
 ``` javascript Code example
 describe("foo", function() {
@@ -43,7 +43,7 @@ describe("foo", function() {
 
 ## Spies
 
-But that first thing that I really liked were the spies. They can stub functions and track calls and their arguments.
+But the first thing that I really liked were the spies. They can stub functions and track calls and their arguments.
 
 ``` javascript Spy example
 describe("foo.setBar", function() {
@@ -66,7 +66,7 @@ describe("foo.setBar", function() {
 });
 ```
 
-The default behavior is just to track calls and arguments, accessible by calling `foo.setBar.mostRecentCall.args[0]` and `foo.setBar.calls[0].args[0]` for instance. In adition, there are some functions that may be used to change its behavior and to call the actual implementation, return a specific value or call a custom implementation.
+The default behavior is to just track calls and arguments, accessible by calling `foo.setBar.mostRecentCall.args[0]` and `foo.setBar.calls[0].args[0]` for instance. In addition, there are some functions that may be used to change its behavior and to call the actual implementation, return a specific value or call a custom implementation.
 
 ## Some Recipes
 
@@ -74,7 +74,7 @@ The default behavior is just to track calls and arguments, accessible by calling
 
 I've used [requireJS][requirejs] to mock the [content script injection][content_script], JavaScript files triggered by Chrome in specified pages according to manifest.json file.
 
-To setup it using [SpecRunner.html][specrunner] add require.js to the header and put its config just before Jasmine setup in the script tag.
+To set it up using [SpecRunner.html][specrunner] add require.js to the header and put its config just before Jasmine setup in the script tag.
 
 ``` html SpecRunner.html
 <script type="text/javascript">
@@ -103,7 +103,7 @@ runs(function(){
 
 ```
 
-I've tried other solutions, but that one was the cleanest and simplest that I've figured out.
+I've tried other solutions, but this one was the cleanest and simplest I found.
 
 ### Mocking Chrome Extension API
 
@@ -154,7 +154,7 @@ chrome.extension.sendMessage.mostRecentCall.args[1].call();
 expect(alert).toHaveBeenCalledWith("response");
 ```
 
-That is usefult to test callbacks (e.g.: listeners/events in Chrome Extension API), but in most cases inline functions make code harder to read, test and reuse.
+That is useful to test callbacks (e.g.: listeners/events in Chrome Extension API), but in most cases inline functions make code harder to read, test and reuse.
 
 So, refactoring last example:
 
@@ -176,7 +176,7 @@ expect(chrome.extension.sendMessage).toHaveBeenCalledWith("message", alertRespon
 
 ## Summary
 
-Jasmine is powerful in its flexibility and simplicity. It's easy to use, extend and read. The only thing that I missed: beforeAll, but I didn't need it to test my Gist.IO extension. Checkout its tests with Jasmine: [gist-io-chrome/spec][extension-specs].
+Jasmine is powerful in its flexibility and simplicity. It's easy to use, extend and read. The only thing that I miss is: beforeAll, but I didn't need it to test my Gist.IO extension. Checkout its tests within Jasmine: [gist-io-chrome/spec][extension-specs].
 
 
 
