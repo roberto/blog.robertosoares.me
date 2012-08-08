@@ -6,6 +6,7 @@ comments: true
 categories: Testing
 ---
 
+[extension]:http://github.com/roberto/gist-io-chrome
 [jasmine-docs]:http://pivotal.github.com/jasmine/
 [gistio]:http://gist.io/
 [Jasmine]:http://github.com/pivotal/jasmine
@@ -16,7 +17,7 @@ categories: Testing
 [async]:http://pivotal.github.com/jasmine/#section-Asynchronous_Support
 [extension-specs]:https://github.com/roberto/gist-io-chrome/tree/master/spec
 
-This weekend I wrote a chrome extension for [Gist.IO][gistio], a nice blog writing for hackers, to try out [Jasmine], a BDD framework for testing JavaScript code. This post contains some notes about it.
+This weekend I wrote [a chrome extension][extension] for [Gist.IO][gistio], a nice blog writing for hackers, to try out [Jasmine], a BDD framework for testing JavaScript code. This post contains some notes about it.
 
 <!-- more -->
 
