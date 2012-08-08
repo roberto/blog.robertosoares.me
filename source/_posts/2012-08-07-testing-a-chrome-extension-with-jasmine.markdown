@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Testing a Chrome Extension with Jasmine"
-date: 2012-08-07 23:17
+date: 2012-08-08 10:51
 comments: true
 categories: Testing
 ---
@@ -36,7 +36,7 @@ describe("A spec", function() {
 But that first thing that I really liked were the spies. They can stub functions and track calls and their arguments. For instance:
 
 ```
-describe("A spy", function() {
+describe("foot.setBar", function() {
   var foo;
 
   beforeEach(function() {
@@ -44,12 +44,16 @@ describe("A spy", function() {
       setBar: function() {}
     };
 
-    spyOn(foo, 'setBar'); // 1. setting up the spy
+    // 1. setting up the spy
+    spyOn(foo, 'setBar'); 
   });
 
-  it("tracks all the arguments of its calls", function() {
-    foo.setBar(456, 'another param'); // 2. call being tested
-    expect(foo.setBar).toHaveBeenCalledWith(456, jasmine.any(String)); //3. checking the spy with a matcher
+  it("should call setBar passing 456 and any String", function() {
+    // 2. call being tested
+    foo.setBar(456, 'another param');
+
+    //3. checking the spy with a matcher
+    expect(foo.setBar).toHaveBeenCalledWith(456, jasmine.any(String)); 
   });
 });
 ```
@@ -58,10 +62,9 @@ The default behavior is just to track calls and arguments, accessible by calling
 
 ## Some Recipes
 
-
 ### Executing JavaScript Files
 
-I've added requireJS to mock the content script injection.
+I've used requireJS to mock the content script injection, JavaScript files triggered by Chrome in specified pages according to manifest.json file.
 
 To setup it using SpecRunner.html it's just to add require.js to the header and put its config just before Jasmine setup in the script tag.
 
@@ -96,6 +99,7 @@ I've tried other solutions, but that one was the cleanest and simplest.
 
 ### Mocking Chrome Extension API
 
+
 ``` javascript
 // chrome.pageAction.show
 // chrome.pageAction.onClicked.addListener
@@ -112,15 +116,35 @@ spyOn(chrome.pageAction.onClicked, 'addListener');
 spyOn(chrome.pageAction, 'show');
 ```
 
-### Helpers
+### Testing inline functions passed as parameters
 
-Sharing functions between spec files is easy. Define them in a JavaScript file and put its reference in the SpecRunner header. In adition, it's possible to declare beforeEach blocks.
+Let's say I want to test if the following function is really calling `alert("response")`.
 
-``` javascript spec/SpecHelper.js
-beforeEach(function(){
-  bar = function(){};  
+```
+chrome.extension.sendMessage("message", function(response) {
+  alert("response");  
 });
 ```
+
+```
+// setting up the spies
+spyOn(window, 'alert');
+spyOn(chrome.extension, 'sendMessage');
+
+// the real deal
+chrome.extension.sendMessage("message", function(response) {
+  alert("response");  
+});
+
+// catching and calling the inline function
+chrome.extension.sendMessage.mostRecentCall.args[1].call();
+
+// checking behavior 
+expect(alert).toHaveBeenCalledWith("response");
+```
+
+That is useful to test listeners, callbacks.
+
 
 ## Summary
 
