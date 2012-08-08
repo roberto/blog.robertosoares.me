@@ -143,12 +143,27 @@ chrome.extension.sendMessage.mostRecentCall.args[1].call();
 expect(alert).toHaveBeenCalledWith("response");
 ```
 
-That is useful to test listeners, callbacks.
+That is useful to test listeners and callbacks, but not using inline functions makes the code easier to read, test and reuse.
 
+```
+alertResponse = function(){
+  alert("response");
+}
+
+spyOn(window, 'alert');
+alertResponse();
+expect(chrome.extension.sendMessage).toHaveBeenCalledWith("response");
+```
+
+```
+spyOn(chrome.extension, 'sendMessage');
+chrome.extension.sendMessage("message", alertResponse);
+expect(chrome.extension.sendMessage).toHaveBeenCalledWith("message", alertResponse);
+```
 
 ## Summary
 
-Jasmine is powerful in its flexibility and simplicity.
+Jasmine is powerful in its flexibility and simplicity. It's easy to use, extend and read. The only thing that I missed: beforeAll, but I didn't need it to test the Gist.IO extension. To checkout its tests with Jasmine: [gist-io-chrome/spec][specs] https://github.com/roberto/gist-io-chrome/tree/master/spec
 
 
 
