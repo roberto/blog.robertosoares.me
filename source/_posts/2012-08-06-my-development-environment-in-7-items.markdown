@@ -35,6 +35,8 @@ categories: Tools
 
 A few centuries ago [Almir Mendes] and [Paulo Jeveaux] posted about their development environment in 7 items and suggest me to do the same. So, here they are:
 
+<!-- more -->
+
 Machine/OS
 ----------
 

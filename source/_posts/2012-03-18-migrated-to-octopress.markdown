@@ -3,7 +3,7 @@ layout: post
 title: "Migrated to Octopress"
 date: 2012-03-27 23:04
 comments: true
-categories: Meta
+categories: Blogging
 ---
 
 [oct]: http://octopress.org "Octopress"
@@ -15,6 +15,8 @@ categories: Meta
 [octnginx]: http://blog.bigdinosaur.org/octopress-and-nginx/ "Octopress and Nginx"
 
 A few weeks ago I hired a VPS to put some personal projects and decided to migrate my blog from Wordpress after reading a blog post of [Almir Mendes][almir] talking about [Octopress][oct].
+
+<!-- more -->
 
 ## Hmm... ok... so, what is Octopress?
 

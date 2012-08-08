@@ -18,6 +18,8 @@ categories: Testing
 
 This weekend I wrote a chrome extension for [Gist.IO][gistio], a nice blog writing for hackers, to try out [Jasmine], a BDD framework for testing JavaScript code. This post contains some notes about it.
 
+<!-- more -->
+
 ## Specs, Expectations, Matchers, Setup and Teardown
 
 After I read a few paragraphs of the [well styled documentation][jasmine-docs], I got everything that I needed to start writing some specs. As I'm used to [RSpec][rspec] DSL, it was even easier.
