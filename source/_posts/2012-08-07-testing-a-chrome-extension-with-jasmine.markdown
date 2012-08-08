@@ -1,19 +1,29 @@
 ---
 layout: post
-title: "Testing a Chrome Extension with Jasmine"
+title: "Testing Chrome Extensions with Jasmine"
 date: 2012-08-08 10:51
 comments: true
 categories: Testing
 ---
 
-This weekend I wrote a chrome extension for Gist.IO, a nice blog writing for hackers, to try out Jasmine, a BDD framework for testing JavaScript code. This post contains my impressions about Jasmine.
+[jasmine-docs]:http://pivotal.github.com/jasmine/
+[gistio]:http://gist.io/
+[Jasmine]:http://github.com/pivotal/jasmine
+[rspec]:http://rspec.info/
+[requirejs]:http://requirejs.org/
+[content_script]:http://code.google.com/chrome/extensions/content_scripts.html
+[specrunner]:https://github.com/pivotal/jasmine/wiki/A-simple-project
+[async]:http://pivotal.github.com/jasmine/#section-Asynchronous_Support
+[extension-specs]:https://github.com/roberto/gist-io-chrome/tree/master/spec
+
+This weekend I wrote a chrome extension for [Gist.IO][gistio], a nice blog writing for hackers, to try out [Jasmine], a BDD framework for testing JavaScript code. This post contains some notes about it.
 
 ## Specs, Expectations, Matchers, Setup and Teardown
 
-After I read a few paragraphs of its well styled documentation, I got everything that I need to start to write some specs. As I'm used to RSpec DSL, it was even easier.
+After I read a few paragraphs of its [well styled documentation][jasmine-docs], I got everything that I need to start to write some specs. As I'm used to [RSpec][rspec] DSL, it was even easier.
 
 ``` javascript Code example
-describe("A spec", function() {
+describe("foo", function() {
   var foo;
 
   beforeEach(function() {
@@ -25,24 +35,22 @@ describe("A spec", function() {
     foo = 0;
   });
 
-  it("is just a function, so it can contain any code", function() {
+  it("should be equal 1", function() {
     expect(foo).toEqual(1);
   });
 });
 ```
 
-## Spy
+## Spies
 
-But that first thing that I really liked were the spies. They can stub functions and track calls and their arguments. For instance:
+But that first thing that I really liked were the spies. They can stub functions and track calls and their arguments.
 
-```
-describe("foot.setBar", function() {
+``` javascript Spy example
+describe("foo.setBar", function() {
   var foo;
 
   beforeEach(function() {
-    foo = {
-      setBar: function() {}
-    };
+    foo = { setBar: function() {} };
 
     // 1. setting up the spy
     spyOn(foo, 'setBar'); 
@@ -58,15 +66,15 @@ describe("foot.setBar", function() {
 });
 ```
 
-The default behavior is just to track calls and arguments, accessible by calling `foo.setBar.mostRecentCall.args[0]` and `foo.setBar.calls[0].args[0]` for instance. There are some functions that may be used to change its behavior and to call the actual implementation, return a specific value or call a custom implementation.
+The default behavior is just to track calls and arguments, accessible by calling `foo.setBar.mostRecentCall.args[0]` and `foo.setBar.calls[0].args[0]` for instance. In adition, there are some functions that may be used to change its behavior and to call the actual implementation, return a specific value or call a custom implementation.
 
 ## Some Recipes
 
 ### Executing JavaScript Files
 
-I've used requireJS to mock the content script injection, JavaScript files triggered by Chrome in specified pages according to manifest.json file.
+I've used [requireJS][requirejs] to mock the [content script injection][content_script], JavaScript files triggered by Chrome in specified pages according to manifest.json file.
 
-To setup it using SpecRunner.html it's just to add require.js to the header and put its config just before Jasmine setup in the script tag.
+To setup it using [SpecRunner.html][specrunner] add require.js to the header and put its config just before Jasmine setup in the script tag.
 
 ``` html SpecRunner.html
 <script type="text/javascript">
@@ -80,11 +88,11 @@ To setup it using SpecRunner.html it's just to add require.js to the header and 
 </script>
 ```
 
-Next step, require the JavaScript file using [Jasmine Async Support][async].
+Next step, require the JavaScript file to be executed using [Jasmine Async Support][async].
 
 ``` javascript
 runs(function(){
-  require(['io_content_script']);
+  require(['content_script']);
 });
 
 waits(100);
@@ -95,10 +103,11 @@ runs(function(){
 
 ```
 
-I've tried other solutions, but that one was the cleanest and simplest.
+I've tried other solutions, but that one was the cleanest and simplest that I've figured out.
 
 ### Mocking Chrome Extension API
 
+A hash and few spies are enough to get it done.
 
 ``` javascript
 // chrome.pageAction.show
@@ -118,32 +127,36 @@ spyOn(chrome.pageAction, 'show');
 
 ### Testing inline functions passed as parameters
 
-Let's say I want to test if the following function is really calling `alert("response")`.
+Let's say I want to test if the following inline function is really calling `alert("response")`.
 
-```
+``` javascript
 chrome.extension.sendMessage("message", function(response) {
   alert("response");  
 });
 ```
 
-```
-// setting up the spies
+I can get it using `mostRecentCall` as shown below:
+
+``` javascript
+// 1. setting up the spies
 spyOn(window, 'alert');
 spyOn(chrome.extension, 'sendMessage');
 
-// the real deal
+// 2. the real deal
 chrome.extension.sendMessage("message", function(response) {
   alert("response");  
 });
 
-// catching and calling the inline function
+// 3. catching and calling the inline function
 chrome.extension.sendMessage.mostRecentCall.args[1].call();
 
-// checking behavior 
+// 4. checking behavior 
 expect(alert).toHaveBeenCalledWith("response");
 ```
 
-That is useful to test listeners and callbacks, but not using inline functions makes the code easier to read, test and reuse.
+That is usefult to test callbacks (e.g.: listeners/events in Chrome Extension API), but in most cases inline functions make code harder to read, test and reuse.
+
+So, refactoring last example:
 
 ```
 alertResponse = function(){
@@ -152,7 +165,7 @@ alertResponse = function(){
 
 spyOn(window, 'alert');
 alertResponse();
-expect(chrome.extension.sendMessage).toHaveBeenCalledWith("response");
+expect(window.alert).toHaveBeenCalledWith("response");
 ```
 
 ```
@@ -163,7 +176,7 @@ expect(chrome.extension.sendMessage).toHaveBeenCalledWith("message", alertRespon
 
 ## Summary
 
-Jasmine is powerful in its flexibility and simplicity. It's easy to use, extend and read. The only thing that I missed: beforeAll, but I didn't need it to test the Gist.IO extension. To checkout its tests with Jasmine: [gist-io-chrome/spec][specs] https://github.com/roberto/gist-io-chrome/tree/master/spec
+Jasmine is powerful in its flexibility and simplicity. It's easy to use, extend and read. The only thing that I missed: beforeAll, but I didn't need it to test my Gist.IO extension. Checkout its tests with Jasmine: [gist-io-chrome/spec][extension-specs].
 
 
 
