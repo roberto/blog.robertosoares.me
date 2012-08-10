@@ -33,7 +33,7 @@ categories: Tools
 [gist.io]:http://github.com/roberto/gist-io-chrome/
 
 
-A few centuries ago [Almir Mendes] and [Paulo Jeveaux] posted about their development environment in 7 items and suggest me to do the same. So, here they are:
+A few centuries ago [Almir Mendes] and [Paulo Jeveaux] posted about their development environment in 7 items and I'd do the same. So, here it is:
 
 <!-- more -->
 
@@ -42,7 +42,7 @@ Machine/OS
 
 Mac Mini as my main work machine and a macbook pro when I need mobility.
 
-It's a pleasure to work with Mac OS and the main reason: it doesn't bother me with many issues that I used to deal with other OSes. After 5 years using it, I feel at home.
+It's a pleasure to work with Mac OS X and the main reason: it doesn't bother me with many issues that I used to deal with other operating systems. After 5 years using it, I feel at home.
 
 Editor
 ------
