@@ -29,18 +29,20 @@ categories: Rails
 [stop_embedding]:http://ruby.bvision.com/blog/please-stop-embedding-bootstrap-classes-in-your-html
 
 
-[Twitter Bootstrap] is a HTML, JS, CSS toolkit [loved, hated][hn-bootstrap] and [used by many developers][builtwith]. As any tool, it can be useful for you in some scenario and, in this post, I cover some topics to support a smooth integration with Ruby on Rails:
+[Twitter Bootstrap] is a HTML, JS, CSS toolkit [loved, hated][hn-bootstrap] and [used by many developers][built-with]. As any tool, it can be useful for you in certain cases and, in this post, I will show how to smoothly integrate it with Ruby on Rails:
 
 * Initial Setup
 * Bootstrap Themes
 * Form Builders
 * Navigation Bar DSL
 * Flash Messages
-* Using it without becoming dependent
+* Avoiding dependency
+
+<!-- more -->
 
 ## Initial Setup
 
-Instead of downloading [Twitter Bootstrap] from its project page and adapt it to Rails, there are some gems to get it done fast and as bonus CSS extensions with [LESS] or [Sass]. As [Sass] is default in Rails, I prefer to use [bootstra-sass]. [less-rails-bootstrap] is an option If you want to use [LESS].
+Instead of downloading [Twitter Bootstrap] from its project page and adapting it to Rails, there are several gems to get you going fast and as bonus, CSS extensions with [LESS] or [Sass]. As [Sass] is default in Rails, I prefer to use [bootstra-sass]. [less-rails-bootstrap] is an option If you want to use [LESS].
 
 Don't forget to [include the javascript files][bootstrap-js].
 
@@ -48,7 +50,7 @@ Don't forget to [include the javascript files][bootstrap-js].
 
 [Twitter Bootstrap] is easly customizable through its [variables and mixins using LESS][variables]. It can also be done with [bootstrap-sass] using the same names for [variables][bootstrap-sass-variables] and [mixins][bootstrap-sass-mixins].
 
-If there isn't time or need to spend customizing colors, fonts, etc, you can use a free theme from [Bootswatch]. There some good options and [bootswatch-rails] makes this even easier if you are using [Sass].
+If there isn't time or the need to customizing colors, fonts, etc, you can use a free theme from [Bootswatch]. There some good options and [bootswatch-rails] which makes it even easier if you are using [Sass].
 
 ## Form Builders
 
@@ -84,7 +86,7 @@ The reason why I'm using [Rails-Bootstrap-Navbar]:
 
 ## Flash Messages
 
-There are [4 kind of alerts][alerts] in [Twitter Bootstrap]: alert-success, alert-error, alert-block and alert-info. So it's needed to set the right CSS class for each flash message type. A solution is to create a helper like this one:
+There are [4 kind of alerts][alerts] in [Twitter Bootstrap]: alert-success, alert-error, alert-block and alert-info. So you'll need to set the right CSS class for each flash message type. A solution is to create a helper like this one:
 
 ``` ruby
 module ApplicationHelper
@@ -108,7 +110,7 @@ end
 
 For the rest of this solution: [Rails flash messages using Twitter Bootstrap](https://gist.github.com/3344628)
 
-## Using it without becoming dependent
+## Avoiding dependency
 
 Independently of the way you choose to use [Twitter Bootstrap], [avoid embedding Bootstrap classes in your HTML][stop_embedding], use inheritance and mixins to create your own classes using bootstrap classes. For instance:
 
@@ -164,11 +166,12 @@ body
   @include makeColumn(4, 2)
 ```
 
-This way the CSS classes are better to understand and it will be easier to change the CSS Framework or upgrade [Twitter Bootstrap] when needed.
+This way the CSS classes are easier to understand and it will be easier to change the CSS Framework or upgrade [Twitter Bootstrap] when needed.
+
 
 ## For more information
 
 * [RailsApps Project: Twitter Bootstrap and Rails](http://railsapps.github.com/twitter-bootstrap-rails.html)
 * [RailsCasts: Twitter Bootstrap Basics](http://railscasts.com/episodes/328-twitter-bootstrap-basics)
 * [Please stop embedding Bootstrap classes in your HTML!][stop_embedding]
-* [Lentlist: Application used to create the examples](https://github.com/roberto/lentlist)
+* [Lentlist: application used to create the examples](https://github.com/roberto/lentlist)
