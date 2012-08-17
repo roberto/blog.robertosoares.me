@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Integrating "
-date: 2012-08-13 10:23
+title: "Integrating Twitter Bootstrap with Ruby on Rails"
+date: 2012-08-17 12:01
 comments: true
 categories: Rails
 ---
@@ -48,7 +48,9 @@ categories: Rails
 
 ## Initial Setup
 
-Instead of downloading [Twitter Bootstrap] from its project page and adapting it to Rails, there are several gems to get you going fast and as bonus, CSS extensions with [LESS] or [Sass]. As [Sass] is default in Rails, I prefer to use [bootstrap-sass]. [less-rails-bootstrap] is an option If you want to use [LESS].
+Instead of downloading [Twitter Bootstrap] from its project page and adapting it to Rails, there are several gems to get you going fast and as bonus, CSS extensions with [LESS] or [Sass].
+
+As [Sass] is default in Rails, I prefer to use [bootstrap-sass]. [less-rails-bootstrap] is an option If you want to use [LESS].
 
 ## Bootstrap Themes
 
@@ -116,7 +118,9 @@ For the rest of this solution: [Rails flash messages using Twitter Bootstrap](ht
 
 ## Pagination
 
-The [most popular pagination libraries][toolbox-pagination] with support for Ruby on Rails are [will_paginate] and [kaminari] and it's easy to find some projects to style them with [Twitter Bootstrap], but you can do this on your own. An option for [kaminari] is to download the views from [twitter-bootstrap-kaminari-views] and put in your project. For [will_paginate], it's just to install [bootstrap-will_paginate].
+The [most popular pagination libraries][toolbox-pagination] with support for Ruby on Rails are [will_paginate] and [kaminari] and it's easy to find some projects to style them with [Twitter Bootstrap], but you can do this on your own.
+
+An option for [kaminari] is to download the views from [twitter-bootstrap-kaminari-views] and put in your project. For [will_paginate], it's just to install [bootstrap-will_paginate].
 
 ## Avoiding dependency
 
@@ -180,4 +184,4 @@ This way the CSS classes are easier to understand and it will be easier to chang
 * [RailsApps Project: Twitter Bootstrap and Rails](http://railsapps.github.com/twitter-bootstrap-rails.html)
 * [RailsCasts: Twitter Bootstrap Basics](http://railscasts.com/episodes/328-twitter-bootstrap-basics)
 * [Please stop embedding Bootstrap classes in your HTML!][stop_embedding]
-* [Lentlist: application used to create the examples](https://github.com/roberto/lentlist)
+* [Lentlist: example application](https://github.com/roberto/lentlist/tree/bootstrap)
