@@ -1,0 +1,45 @@
+---
+layout: post
+title: "Conferências 2012"
+date: 2012-11-25 18:12
+comments: true
+categories: 
+---
+
+[RubyConfBR]:http://rubyconf.com.br/
+[rubyconf-palestras]:http://www.eventials.com/rubyconfbr2012
+[palestra-bruce]:http://www.eventials.com/rubyconfbr2012/recorded/M2UzZTJkMzY2MzdiNTg2NTUxNWM1MzI3NWY1YjRhMzYjIzEyODQ_3D
+[palestra-jose]:http://www.eventials.com/rubyconfbr2012/recorded/M2UzZTJkMzY2MzdiNTg2NTUxNWM1MzI3NWY1YjRhMzYjIzEyOTk_3D
+[pragmatic-programmer]:http://amzn.to/TXGI7x
+[GOOS]:http://amzn.to/TeJeHJ
+[UESC]:http://uesc.br/
+[ruby-sinform]:http://roberto.github.com/ruby-sinform-2012/
+[Rock'n Rails]:http://www.rockandrails.com.br/
+[Giran]:http://giran.com.br/
+[rockrails-palestras]:http://www.rockandrails.com.br/post/6
+[palestra-tiago]:http://www.slideshare.net/timotta/melhorando-a-performance-do-seu-projeto-em-rails
+[e-Core]:http://www.ecore.com.br/
+[rodrigo]:http://rosenfeld.herokuapp.com/
+[QCon SP]:http://qconsp.com/
+[FISL]:http://softwarelivre.org/fisl13/
+
+
+Desde a universidade que adquiri o gosto de participar de conferências, principalmente as com mais mochilas que gente por metro quadrado, e de todas sempre tive algum tipo de retorno, através de oportunidades de trabalho ou simplesmente através da motivação para estudar outras tecnologias. Neste post deixo alguns comentários dos eventos que fui este ano.
+
+<!-- more -->
+
+## [RubyConfBR]
+
+Evento realizado pela Locaweb desde 2008 em SP. Estive presente em quase todas edições, já que trabalho em casa desde 2006, vem sendo uma boa forma de encontrar colegas pessoalmente, além de fazer novos contatos. E de bônus assisto palestras. Falando em palestras, a seleção deste ano foi a melhor das edições, com destaque para: ["Por amor ao código" por Bruce William][palestra-bruce] e ["Vamos falar sobre concorrência" por José Valim][palestra-jose]. Por fim, os livros mais recomendados pelos palestrantes: [The Pragmatic Programmer: From Journeyman to Master][pragmatic-programmer] e [Growing Object-Oriented Software, Guided by Tests][GOOS].
+
+## SINFORM
+
+Evento que ocorre todo ano na [UESC], onde graduei em Ciência da Computação. Quatro dias de palestras, mostra de trabalhos e workshops, abordando diferentes áreas, este ano com Robotótica Móvel, Blender, Android, Scrum, Bioinformática, Propriedade Intelectual, entre tantos outros. Tive a oportunidade de realizar um [workshop de Ruby][ruby-sinform], além de passar um tempo num ambiente acadêmico, conversando com docentes e discentes. Realmente inspirador, tanto que planejo fazer um mestrado dentro de alguns anos, mas primeiro tenho que parar de mudar de cidade.
+
+## [Rock'n Rails]
+
+Segunda edição do evento realizado pela [Giran] no ES, reunindo curiosos e profissionais em Ruby e Rails. Dentre [as palestras][rockrails-palestras], destaco a de Tiago Motta, tanto pelo conteúdo, [Otimizando seu projeto Rails][palestra-tiago], quanto pela forma de apresentação, uma narrativa despretensiosa. E o melhor foi rever o pessoal da [Giran] e [Rodrigo Rosenfeld][rodrigo], com quem estava trabalhando na época pela [e-Core].
+
+## 2013
+
+Além de tentar continuar batendo o ponto nos eventos que fui em 2012, estou de olho na [QCon SP] e no [FISL] em 2013, eventos que ainda não participei.
