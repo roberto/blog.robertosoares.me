@@ -22,7 +22,7 @@ A list with some great screencasts resources about Ruby.
 
 You couldn't make it to that great conference, maybe you can find it on [Confreaks]. There are 54 events at the time I am writing this post, most of them Ruby related covering a great variety of topics.
 
-As [RubyConf Brasil] is the only conference that I go for everything else there's Confreaks, videos are available for free.
+As [RubyConf Brasil] is the only big conference that I used to go, for everything else there's Confreaks, videos are available for free.
 
 ## [PeepCode]
 
