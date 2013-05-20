@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Roberto Soares]]></title>
+  <link href="http://blog.robertosoares.me/atom.xml" rel="self"/>
+  <link href="http://blog.robertosoares.me/"/>
+  <updated>2013-05-20T18:17:28-03:00</updated>
+  <id>http://blog.robertosoares.me/</id>
+  <author>
+    <name><![CDATA[Roberto Soares]]></name>
+    <email><![CDATA[contact@robertosoares.me]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Conferências 2012]]></title>
+    <link href="http://blog.robertosoares.me/blog/2012/11/25/conferencias-2012/"/>
+    <updated>2012-11-25T18:12:00-02:00</updated>
+    <id>http://blog.robertosoares.me/blog/2012/11/25/conferencias-2012</id>
+    <content type="html"><![CDATA[<p>Desde a universidade que adquiri o gosto de participar de conferências, principalmente as com mais mochilas que gente por metro quadrado, e de todas sempre tive algum tipo de retorno, através de oportunidades de trabalho ou simplesmente através da motivação para estudar outras tecnologias. Neste post deixo alguns comentários dos eventos que fui este ano.</p>
+
+<!-- more -->
+
+
+<h2><a href="http://rubyconf.com.br/">RubyConfBR</a></h2>
+
+<p>Evento realizado pela Locaweb desde 2008 em SP. Estive presente em quase todas edições, já que trabalho em casa desde 2006, vem sendo uma boa forma de encontrar colegas pessoalmente, além de fazer novos contatos. E de bônus assisto palestras. Falando em palestras, a seleção deste ano foi a melhor das edições, com destaque para: <a href="http://www.eventials.com/rubyconfbr2012/recorded/M2UzZTJkMzY2MzdiNTg2NTUxNWM1MzI3NWY1YjRhMzYjIzEyODQ_3D">&ldquo;Por amor ao código&rdquo; por Bruce William</a> e <a href="http://www.eventials.com/rubyconfbr2012/recorded/M2UzZTJkMzY2MzdiNTg2NTUxNWM1MzI3NWY1YjRhMzYjIzEyOTk_3D">&ldquo;Vamos falar sobre concorrência&rdquo; por José Valim</a>. Por fim, os livros mais recomendados pelos palestrantes: <a href="http://amzn.to/TXGI7x">The Pragmatic Programmer: From Journeyman to Master</a> e <a href="http://amzn.to/TeJeHJ">Growing Object-Oriented Software, Guided by Tests</a>.</p>
+
+<h2>SINFORM</h2>
+
+<p>Evento que ocorre todo ano na <a href="http://uesc.br/">UESC</a>, onde graduei em Ciência da Computação. Quatro dias de palestras, mostra de trabalhos e workshops, abordando diferentes áreas, este ano com Robotótica Móvel, Blender, Android, Scrum, Bioinformática, Propriedade Intelectual, entre tantos outros. Tive a oportunidade de realizar um <a href="http://roberto.github.com/ruby-sinform-2012/">workshop de Ruby</a>, além de passar um tempo num ambiente acadêmico, conversando com docentes e discentes. Realmente inspirador, tanto que planejo fazer um mestrado dentro de alguns anos, mas primeiro tenho que parar de mudar de cidade.</p>
+
+<h2><a href="http://www.rockandrails.com.br/">Rock&#8217;n Rails</a></h2>
+
+<p>Segunda edição do evento realizado pela <a href="http://giran.com.br/">Giran</a> no ES, reunindo curiosos e profissionais em Ruby e Rails. Dentre <a href="http://www.rockandrails.com.br/post/6">as palestras</a>, destaco a de Tiago Motta, tanto pelo conteúdo, <a href="http://www.slideshare.net/timotta/melhorando-a-performance-do-seu-projeto-em-rails">Otimizando seu projeto Rails</a>, quanto pela forma de apresentação, uma narrativa despretensiosa. E o melhor foi rever o pessoal da <a href="http://giran.com.br/">Giran</a> e <a href="http://rosenfeld.herokuapp.com/">Rodrigo Rosenfeld</a>, com quem estava trabalhando na época pela <a href="http://www.ecore.com.br/">e-Core</a>.</p>
+
+<h2>2013</h2>
+
+<p>Além de tentar continuar batendo o ponto nos eventos que fui em 2012, estou de olho na <a href="http://qconsp.com/">QCon SP</a> e no <a href="http://softwarelivre.org/fisl13/">FISL</a> em 2013, eventos que ainda não participei.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Improving Your Ruby Programming Skills by Watching]]></title>
+    <link href="http://blog.robertosoares.me/blog/2012/08/28/improving-your-ruby-programming-skills-by-watching/"/>
+    <updated>2012-08-28T16:45:00-03:00</updated>
+    <id>http://blog.robertosoares.me/blog/2012/08/28/improving-your-ruby-programming-skills-by-watching</id>
+    <content type="html"><![CDATA[<p>A list with some great screencasts resources about Ruby.</p>
+
+<!-- more -->
+
+
+<h2><a href="http://confreaks.com/events">Confreaks</a></h2>
+
+<p>You couldn&rsquo;t make it to that great conference, maybe you can find it on <a href="http://confreaks.com/events">Confreaks</a>. There are 54 events at the time I am writing this post, most of them Ruby related covering a great variety of topics.</p>
+
+<p>As <a href="http://www.rubyconf.com.br/">RubyConf Brasil</a> is the only big conference that I used to go, for everything else there&rsquo;s Confreaks, videos are available for free.</p>
+
+<h2><a href="http://peepcode.com/">PeepCode</a></h2>
+
+<p>&ldquo;Get the newest and hottest development resources from PeepCode, well before they’re covered in books&rdquo; described well their one-hour tutorials, $12 each.</p>
+
+<p>Besides the tutorials, there is the exceptional <a href="https://peepcode.com/screencasts/play-by-play">Play by Play series</a> where you can watch experts working in some task given by <a href="https://twitter.com/topfunky">Geoffrey Grosenbach</a>.</p>
+
+<h2><a href="http://www.destroyallsoftware.com/screencasts">Destroy All Software</a></h2>
+
+<p>Screencasts covering Unix, Testing, OO Design, Git, Vim and dynamic languages (with a Ruby focus), $9/month.</p>
+
+<p><a href="https://twitter.com/garybernhardt">Gary Bernhardt</a> was the first invited expert to the <a href="https://peepcode.com/screencasts/play-by-play">Play by Play series</a> and I think he liked, since he has already produced more than 70 screencasts after that.</p>
+
+<p>Watching his screencasts is like having another developer in the team giving you some great tips and advices.</p>
+
+<h2><a href="http://railscasts.com/">RailsCasts</a></h2>
+
+<p>Screencasts about Rails and related projects and techniques. There are free, revised and pro episodes. The last two are only available for RailsCast Pro subscribers, $9/month. There is a transcription and a github repository for each episode.</p>
+
+<p>Ryan Bates has been doing a great work covering a lot of projects, some of them I&rsquo;ve heard about first from his screencasts.</p>
+
+<h2>Extras</h2>
+
+<ul>
+<li><a href="http://www.infoq.com/bycategory/contentbycategory.action?idx=3&amp;alias=ruby&amp;ct=5">InfoQ: Presentations about Ruby</a></li>
+<li><a href="http://codeschool.com">Code School</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Integrating Twitter Bootstrap with Ruby on Rails]]></title>
+    <link href="http://blog.robertosoares.me/blog/2012/08/17/integrating-twitter-bootstrap-with-ruby-on-rails/"/>
+    <updated>2012-08-17T12:01:00-03:00</updated>
+    <id>http://blog.robertosoares.me/blog/2012/08/17/integrating-twitter-bootstrap-with-ruby-on-rails</id>
+    <content type="html"><![CDATA[<p><a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> is a HTML, JS, CSS toolkit <a href="http://news.ycombinator.com/item?id=3536291">loved, hated</a> and <a href="http://builtwithbootstrap.com/">used by many developers</a>. As any tool, it can be useful for you in certain cases and, in this post, I will show how to smoothly integrate it with Ruby on Rails:</p>
+
+<ul>
+<li>Initial Setup</li>
+<li>Bootstrap Themes</li>
+<li>Form Builders</li>
+<li>Navigation Bar DSL</li>
+<li>Flash Messages</li>
+<li>Pagination</li>
+<li>Avoiding dependency</li>
+</ul>
+
+
+<!-- more -->
+
+
+<h2>Initial Setup</h2>
+
+<p>Instead of downloading <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> from its project page and adapting it to Rails, there are several gems to get you going fast and as bonus, CSS extensions with <a href="http://lesscss.org/">LESS</a> or <a href="http://sass-lang.com/">Sass</a>.</p>
+
+<p>As <a href="http://sass-lang.com/">Sass</a> is default in Rails, I prefer to use <a href="https://github.com/thomas-mcdonald/bootstrap-sass/">bootstrap-sass</a>. <a href="https://github.com/metaskills/less-rails-bootstrap/">less-rails-bootstrap</a> is an option If you want to use <a href="http://lesscss.org/">LESS</a>.</p>
+
+<h2>Bootstrap Themes</h2>
+
+<p><a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> is easly customizable through its <a href="http://twitter.github.com/bootstrap/less.html#variables">variables and mixins using LESS</a>. It can also be done with <a href="https://github.com/thomas-mcdonald/bootstrap-sass/">bootstrap-sass</a> using the same names for <a href="https://github.com/thomas-mcdonald/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/_variables.scss">variables</a> and <a href="https://github.com/thomas-mcdonald/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/_mixins.scss">mixins</a>.</p>
+
+<p>But if there isn&rsquo;t time or the need to customizing colors, fonts, etc, you can use a free theme from <a href="http://bootswatch.com/">Bootswatch</a>. There some good options and <a href="https://github.com/maxim/bootswatch-rails">bootswatch-rails</a> which makes it even easier if you are using <a href="http://sass-lang.com/">Sass</a>.</p>
+
+<h2>Form Builders</h2>
+
+<p>Some options: <a href="https://github.com/mjbellantoni/formtastic-bootstrap">formtastic-bootstrap</a> for <a href="https://github.com/justinfrench/formtastic">formtastic</a>, a builtin generator for <a href="https://github.com/plataformatec/simple_form">simple_form</a> and a specified form builder called <a href="https://github.com/potenza/bootstrap_form">bootstrap_form</a>. I use <a href="https://github.com/plataformatec/simple_form">simple_form</a>, installing it with bootstrap option:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rails generate simple_form:install --bootstrap</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Navigation Bar DSL</h2>
+
+<p>The reason why I use <a href="https://github.com/julescopeland/Rails-Bootstrap-Navbar">Rails-Bootstrap-Navbar</a>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='diff'><span class='line'><span class="gi">+&lt;%= nav_bar fixed: :top, brand: &quot;Lentlist&quot;, responsive: true %&gt;</span>
+</span><span class='line'><span class="gd">-&lt;div class=&quot;navbar navbar-fixed-top&quot;&gt;</span>
+</span><span class='line'><span class="gd">-  &lt;div class=&quot;navbar-inner&quot;&gt;</span>
+</span><span class='line'><span class="gd">-    &lt;div class=&quot;container&quot;&gt;</span>
+</span><span class='line'><span class="gd">-      &lt;a class=&quot;btn btn-navbar&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.nav-collapse&quot;&gt;</span>
+</span><span class='line'><span class="gd">-        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;</span>
+</span><span class='line'><span class="gd">-        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;</span>
+</span><span class='line'><span class="gd">-        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;</span>
+</span><span class='line'><span class="gd">-      &lt;/a&gt;</span>
+</span><span class='line'><span class="gd">-      &lt;%= link_to &quot;Lentlist&quot;, root_path, class: &quot;brand&quot; %&gt;</span>
+</span><span class='line'><span class="gd">-      &lt;div class=&quot;nav-collapse&quot;&gt;</span>
+</span><span class='line'><span class="gd">-        &lt;ul class=&quot;nav&quot;&gt;</span>
+</span><span class='line'><span class="gd">-        &lt;/ul&gt;</span>
+</span><span class='line'><span class="gd">-      &lt;/div&gt;</span>
+</span><span class='line'><span class="gd">-    &lt;/div&gt;</span>
+</span><span class='line'><span class="gd">-  &lt;/div&gt;</span>
+</span><span class='line'><span class="gd">-&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Flash Messages</h2>
+
+<p>There are <a href="http://twitter.github.com/bootstrap/components.html#alerts">4 kind of alerts</a> in <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>: alert-success, alert-error, alert-block and alert-info. So you&rsquo;ll need to set the right CSS class for each flash message type. A solution is to create a helper like this one:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">module</span> <span class="nn">ApplicationHelper</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">bootstrap_class_for</span> <span class="n">flash_type</span>
+</span><span class='line'>    <span class="k">case</span> <span class="n">flash_type</span>
+</span><span class='line'>      <span class="k">when</span> <span class="ss">:success</span>
+</span><span class='line'>        <span class="s2">&quot;alert-success&quot;</span>
+</span><span class='line'>      <span class="k">when</span> <span class="ss">:error</span>
+</span><span class='line'>        <span class="s2">&quot;alert-error&quot;</span>
+</span><span class='line'>      <span class="k">when</span> <span class="ss">:alert</span>
+</span><span class='line'>        <span class="s2">&quot;alert-block&quot;</span>
+</span><span class='line'>      <span class="k">when</span> <span class="ss">:notice</span>
+</span><span class='line'>        <span class="s2">&quot;alert-info&quot;</span>
+</span><span class='line'>      <span class="k">else</span>
+</span><span class='line'>        <span class="n">flash_type</span><span class="o">.</span><span class="n">to_s</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>For the rest of this solution: <a href="https://gist.github.com/3344628">Rails flash messages using Twitter Bootstrap</a>.</p>
+
+<h2>Pagination</h2>
+
+<p>The <a href="https://www.ruby-toolbox.com/categories/pagination">most popular pagination libraries</a> with support for Ruby on Rails are <a href="https://github.com/mislav/will_paginate">will_paginate</a> and <a href="https://github.com/amatsuda/kaminari">kaminari</a> and it&rsquo;s easy to find some projects to style them with <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>, but you can do this on your own.</p>
+
+<p>An option for <a href="https://github.com/amatsuda/kaminari">kaminari</a> is to download the views from <a href="https://github.com/gabetax/twitter-bootstrap-kaminari-views/downloads">twitter-bootstrap-kaminari-views</a> and put in your project. For <a href="https://github.com/mislav/will_paginate">will_paginate</a>, it&rsquo;s just to install <a href="https://github.com/yrgoldteeth/bootstrap-will_paginate">bootstrap-will_paginate</a>.</p>
+
+<h2>Avoiding dependency</h2>
+
+<p>Independently of the way you choose to use <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>, <a href="http://ruby.bvision.com/blog/please-stop-embedding-bootstrap-classes-in-your-html">avoid embedding Bootstrap classes in your HTML</a>, use inheritance and mixins to create your own classes using bootstrap classes. For instance:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='erb'><span class='line'><span class="x">&lt;body class=&quot;container&quot;&gt;</span>
+</span><span class='line'><span class="x">  </span><span class="cp">&lt;%=</span> <span class="n">render</span> <span class="n">partial</span><span class="p">:</span> <span class="s1">&#39;shared/nav&#39;</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">  &lt;div class=&quot;row&quot;&gt;</span>
+</span><span class='line'><span class="x">    &lt;div class=&quot;span7&quot;&gt;</span>
+</span><span class='line'><span class="x">      </span><span class="cp">&lt;%=</span> <span class="n">render</span> <span class="n">partial</span><span class="p">:</span> <span class="s1">&#39;shared/flash_messages&#39;</span><span class="p">,</span> <span class="n">flash</span><span class="p">:</span> <span class="n">flash</span> <span class="cp">%&gt;</span><span class="x"> </span>
+</span><span class='line'><span class="x">      </span><span class="cp">&lt;%=</span> <span class="k">yield</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">    &lt;/div&gt;</span>
+</span><span class='line'><span class="x">    &lt;div class=&quot;span3 offset2&quot;&gt;</span>
+</span><span class='line'><span class="x">      </span><span class="cp">&lt;%=</span> <span class="n">render</span> <span class="n">partial</span><span class="p">:</span> <span class="s1">&#39;shared/sidebar&#39;</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">    &lt;/div&gt;</span>
+</span><span class='line'><span class="x">  &lt;/div&gt;</span>
+</span><span class='line'><span class="x">  &lt;hr/&gt;</span>
+</span><span class='line'><span class="x">  &lt;footer&gt;Footer&lt;/footer&gt;</span>
+</span><span class='line'><span class="x">&lt;/body&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Instead of <code>span*</code>, <code>row</code>, <code>offset*</code> and <code>container</code>, use semantic classes:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='erb'><span class='line'><span class="x">&lt;body&gt;</span>
+</span><span class='line'><span class="x">  </span><span class="cp">&lt;%=</span> <span class="n">render</span> <span class="n">partial</span><span class="p">:</span> <span class="s1">&#39;shared/nav&#39;</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">  &lt;div class=&quot;content&quot;&gt;</span>
+</span><span class='line'><span class="x">    &lt;div class=&quot;main&quot;&gt;</span>
+</span><span class='line'><span class="x">      </span><span class="cp">&lt;%=</span> <span class="n">render</span> <span class="n">partial</span><span class="p">:</span> <span class="s1">&#39;shared/flash_messages&#39;</span><span class="p">,</span> <span class="n">flash</span><span class="p">:</span> <span class="n">flash</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">      </span><span class="cp">&lt;%=</span> <span class="k">yield</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">    &lt;/div&gt;</span>
+</span><span class='line'><span class="x">    &lt;div class=&quot;sidebar&quot;&gt;</span>
+</span><span class='line'><span class="x">      </span><span class="cp">&lt;%=</span> <span class="n">render</span> <span class="n">partial</span><span class="p">:</span> <span class="s1">&#39;shared/sidebar&#39;</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">    &lt;/div&gt;</span>
+</span><span class='line'><span class="x">  &lt;/div&gt;</span>
+</span><span class='line'><span class="x">  &lt;hr/&gt;</span>
+</span><span class='line'><span class="x">  &lt;footer&gt;Footer&lt;/footer&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And use <a href="http://sass-lang.com/">Sass</a> or <a href="http://lesscss.org/">LESS</a> to define your classes. A <a href="http://sass-lang.com/">Sass</a> example:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="nt">body</span>
+</span><span class='line'>  <span class="k">@extend</span> <span class="nc">.container</span>
+</span><span class='line'>
+</span><span class='line'><span class="nc">.content</span>
+</span><span class='line'>  <span class="k">@include</span><span class="nd"> makeRow</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="nc">.content</span> <span class="nc">.main</span>
+</span><span class='line'>  <span class="k">@include</span><span class="nd"> makeColumn</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nc">.content</span> <span class="nc">.sidebar</span>
+</span><span class='line'>  <span class="k">@include</span><span class="nd"> makeColumn</span><span class="p">(</span><span class="mi">4</span><span class="o">,</span> <span class="mi">2</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This way the CSS classes are easier to understand and it will be easier to change the CSS Framework or upgrade <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> when needed.</p>
+
+<h2>For more information</h2>
+
+<ul>
+<li><a href="http://railsapps.github.com/twitter-bootstrap-rails.html">RailsApps Project: Twitter Bootstrap and Rails</a></li>
+<li><a href="http://railscasts.com/episodes/328-twitter-bootstrap-basics">RailsCasts: Twitter Bootstrap Basics</a></li>
+<li><a href="http://ruby.bvision.com/blog/please-stop-embedding-bootstrap-classes-in-your-html">Please stop embedding Bootstrap classes in your HTML!</a></li>
+<li><a href="https://github.com/roberto/lentlist/tree/bootstrap">Lentlist: example application</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Testing Chrome Extensions with Jasmine]]></title>
+    <link href="http://blog.robertosoares.me/blog/2012/08/08/testing-chrome-extensions-with-jasmine/"/>
+    <updated>2012-08-08T16:31:00-03:00</updated>
+    <id>http://blog.robertosoares.me/blog/2012/08/08/testing-chrome-extensions-with-jasmine</id>
+    <content type="html"><![CDATA[<p>This weekend I wrote <a href="http://github.com/roberto/gist-io-chrome">a chrome extension</a> for <a href="http://gist.io/">Gist.IO</a>, a nice blog writing for hackers, to try out <a href="http://github.com/pivotal/jasmine">Jasmine</a>, a BDD framework for testing JavaScript code. This post contains some notes about it.</p>
+
+<!-- more -->
+
+
+<h2>Specs, Expectations, Matchers, Setup and Teardown</h2>
+
+<p>After I read a few paragraphs of the <a href="http://pivotal.github.com/jasmine/">well styled documentation</a>, I got everything that I needed to start writing some specs. As I&rsquo;m used to <a href="http://rspec.info/">RSpec</a> DSL, it was even easier.</p>
+
+<figure class='code'><figcaption><span>Code example</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">describe</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">foo</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">beforeEach</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">foo</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">foo</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">afterEach</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">foo</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">it</span><span class="p">(</span><span class="s2">&quot;should be equal 1&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">expect</span><span class="p">(</span><span class="nx">foo</span><span class="p">).</span><span class="nx">toEqual</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Spies</h2>
+
+<p>But the first thing that I really liked were the spies. They can stub functions and track calls and their arguments.</p>
+
+<figure class='code'><figcaption><span>Spy example</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">describe</span><span class="p">(</span><span class="s2">&quot;foo.setBar&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">foo</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">beforeEach</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">foo</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">setBar</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{}</span> <span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// 1. setting up the spy</span>
+</span><span class='line'>    <span class="nx">spyOn</span><span class="p">(</span><span class="nx">foo</span><span class="p">,</span> <span class="s1">&#39;setBar&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">it</span><span class="p">(</span><span class="s2">&quot;should call setBar passing 456 and any String&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// 2. call being tested</span>
+</span><span class='line'>    <span class="nx">foo</span><span class="p">.</span><span class="nx">setBar</span><span class="p">(</span><span class="mi">456</span><span class="p">,</span> <span class="s1">&#39;another param&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">//3. checking the spy with a matcher</span>
+</span><span class='line'>    <span class="nx">expect</span><span class="p">(</span><span class="nx">foo</span><span class="p">.</span><span class="nx">setBar</span><span class="p">).</span><span class="nx">toHaveBeenCalledWith</span><span class="p">(</span><span class="mi">456</span><span class="p">,</span> <span class="nx">jasmine</span><span class="p">.</span><span class="nx">any</span><span class="p">(</span><span class="nb">String</span><span class="p">));</span>
+</span><span class='line'>  <span class="p">});</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The default behavior is to just track calls and arguments, accessible by calling <code>foo.setBar.mostRecentCall.args[0]</code> and <code>foo.setBar.calls[0].args[0]</code> for instance. In addition, there are some functions that may be used to change its behavior and to call the actual implementation, return a specific value or call a custom implementation.</p>
+
+<h2>Some Recipes</h2>
+
+<h3>Executing JavaScript Files</h3>
+
+<p>I&rsquo;ve used <a href="http://requirejs.org/">requireJS</a> to mock the <a href="http://code.google.com/chrome/extensions/content_scripts.html">content script injection</a>, JavaScript files triggered by Chrome in specified pages according to manifest.json file.</p>
+
+<p>To set it up using <a href="https://github.com/pivotal/jasmine/wiki/A-simple-project">SpecRunner.html</a> add require.js to the header and put its config just before Jasmine setup in the script tag.</p>
+
+<figure class='code'><figcaption><span>SpecRunner.html</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">require</span> <span class="o">=</span> <span class="nx">require</span><span class="p">.</span><span class="nx">config</span><span class="p">({</span>
+</span><span class='line'>      <span class="nx">baseUrl</span><span class="o">:</span> <span class="s2">&quot;../&quot;</span>
+</span><span class='line'>    <span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">jasmineEnv</span> <span class="o">=</span> <span class="nx">jasmine</span><span class="p">.</span><span class="nx">getEnv</span><span class="p">();</span>
+</span><span class='line'>    <span class="c1">//(...)</span>
+</span><span class='line'><span class="nt">&lt;/script&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next step, require the JavaScript file to be executed using <a href="http://pivotal.github.com/jasmine/#section-Asynchronous_Support">Jasmine Async Support</a>.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">runs</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>  <span class="nx">require</span><span class="p">([</span><span class="s1">&#39;content_script&#39;</span><span class="p">]);</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">waits</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">runs</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>  <span class="nx">expect</span><span class="p">(</span><span class="nx">chrome</span><span class="p">.</span><span class="nx">extension</span><span class="p">.</span><span class="nx">sendMessage</span><span class="p">).</span><span class="nx">toHaveBeenCalledWith</span><span class="p">(</span><span class="s1">&#39;io&#39;</span><span class="p">,</span> <span class="nx">jasmine</span><span class="p">.</span><span class="nx">any</span><span class="p">(</span><span class="nb">Function</span><span class="p">));</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I&rsquo;ve tried other solutions, but this one was the cleanest and simplest I found.</p>
+
+<h3>Mocking Chrome Extension API</h3>
+
+<p>A hash and few spies are enough to get it done.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// chrome.pageAction.show</span>
+</span><span class='line'><span class="c1">// chrome.pageAction.onClicked.addListener</span>
+</span><span class='line'><span class="nx">chrome</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">pageAction</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">show</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){},</span>
+</span><span class='line'>    <span class="nx">onClicked</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">addListener</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">spyOn</span><span class="p">(</span><span class="nx">chrome</span><span class="p">.</span><span class="nx">pageAction</span><span class="p">.</span><span class="nx">onClicked</span><span class="p">,</span> <span class="s1">&#39;addListener&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">spyOn</span><span class="p">(</span><span class="nx">chrome</span><span class="p">.</span><span class="nx">pageAction</span><span class="p">,</span> <span class="s1">&#39;show&#39;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Testing inline functions passed as parameters</h3>
+
+<p>Let&rsquo;s say I want to test if the following inline function is really calling <code>alert("response")</code>.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">chrome</span><span class="p">.</span><span class="nx">extension</span><span class="p">.</span><span class="nx">sendMessage</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;response&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I can get it using <code>mostRecentCall</code> as shown below:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// 1. setting up the spies</span>
+</span><span class='line'><span class="nx">spyOn</span><span class="p">(</span><span class="nb">window</span><span class="p">,</span> <span class="s1">&#39;alert&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">spyOn</span><span class="p">(</span><span class="nx">chrome</span><span class="p">.</span><span class="nx">extension</span><span class="p">,</span> <span class="s1">&#39;sendMessage&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// 2. the real deal</span>
+</span><span class='line'><span class="nx">chrome</span><span class="p">.</span><span class="nx">extension</span><span class="p">.</span><span class="nx">sendMessage</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;response&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// 3. catching and calling the inline function</span>
+</span><span class='line'><span class="nx">chrome</span><span class="p">.</span><span class="nx">extension</span><span class="p">.</span><span class="nx">sendMessage</span><span class="p">.</span><span class="nx">mostRecentCall</span><span class="p">.</span><span class="nx">args</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">call</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// 4. checking behavior </span>
+</span><span class='line'><span class="nx">expect</span><span class="p">(</span><span class="nx">alert</span><span class="p">).</span><span class="nx">toHaveBeenCalledWith</span><span class="p">(</span><span class="s2">&quot;response&quot;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That is useful to test callbacks (e.g.: listeners/events in Chrome Extension API), but in most cases inline functions make code harder to read, test and reuse.</p>
+
+<p>So, refactoring last example:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">alertResponse</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>  <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;response&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">spyOn</span><span class="p">(</span><span class="nb">window</span><span class="p">,</span> <span class="s1">&#39;alert&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">alertResponse</span><span class="p">();</span>
+</span><span class='line'><span class="nx">expect</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">).</span><span class="nx">toHaveBeenCalledWith</span><span class="p">(</span><span class="s2">&quot;response&quot;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">spyOn</span><span class="p">(</span><span class="nx">chrome</span><span class="p">.</span><span class="nx">extension</span><span class="p">,</span> <span class="s1">&#39;sendMessage&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="nx">chrome</span><span class="p">.</span><span class="nx">extension</span><span class="p">.</span><span class="nx">sendMessage</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">,</span> <span class="nx">alertResponse</span><span class="p">);</span>
+</span><span class='line'><span class="nx">expect</span><span class="p">(</span><span class="nx">chrome</span><span class="p">.</span><span class="nx">extension</span><span class="p">.</span><span class="nx">sendMessage</span><span class="p">).</span><span class="nx">toHaveBeenCalledWith</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">,</span> <span class="nx">alertResponse</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Summary</h2>
+
+<p>Jasmine is powerful in its flexibility and simplicity. It&rsquo;s easy to use, extend and read. The only thing that I miss is: beforeAll, but I didn&rsquo;t need it to test my Gist.IO extension. Checkout its tests within Jasmine: <a href="https://github.com/roberto/gist-io-chrome/tree/master/spec">gist-io-chrome/spec</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My Development Environment in 7 items]]></title>
+    <link href="http://blog.robertosoares.me/blog/2012/08/06/my-development-environment-in-7-items/"/>
+    <updated>2012-08-06T21:50:00-03:00</updated>
+    <id>http://blog.robertosoares.me/blog/2012/08/06/my-development-environment-in-7-items</id>
+    <content type="html"><![CDATA[<p>A few centuries ago <a href="http://www.almirmendes.com/blog/2011/01/20/meu-ambiente-de-trabalho-em-7-itens/">Almir Mendes</a> and <a href="http://jeveaux.com/2011/meu-ambiente-de-trabalho-em-7-itens/">Paulo Jeveaux</a> posted about their development environment in 7 items and I&rsquo;d do the same. So, here it is:</p>
+
+<!-- more -->
+
+
+<h2>Machine/OS</h2>
+
+<p>Mac Mini as my main work machine and a macbook pro when I need mobility.</p>
+
+<p>It&rsquo;s a pleasure to work with Mac OS X and the main reason: it doesn&rsquo;t bother me with many issues that I used to deal with other operating systems. After 5 years using it, I feel at home.</p>
+
+<h2>Editor</h2>
+
+<p><a href="http://www.sublimetext.com/">SublimeText</a> could be seen only as a good editor just for being a <a href="http://macromates.com/">Textmate</a> on steroids and great for many developers, but not for me. However, its <a href="http://www.sublimetext.com/docs/2/vintage.html">vintage mode</a> really got me, since I&rsquo;ve been a <a href="http://www.vim.org/">Vim</a> user for years, plus its customization and look and feel are superb.</p>
+
+<h2>Terminal</h2>
+
+<p>Bash + Terminal.app. In addition, currently I&rsquo;m trying <a href="http://www.iterm2.com/">iTerm2</a>, so far, so good.</p>
+
+<h2>Browser</h2>
+
+<p><a href="http://www.google.com/chrome">Chrome</a> with the following extensions: <a href="https://chrome.google.com/webstore/detail/cajhjefnbkonbapdnfbolcehblmcipnf">Delicious Bookmarks</a>, <a href="https://chrome.google.com/webstore/detail/aonjhmdcgbgikgjapjckfkefpphjpgma">MeasureIt!</a>, <a href="https://chrome.google.com/webstore/detail/cpngackimfmofbokmjmljamhdncknpmg">Screen Capture</a>, <a href="http://www.klip.me/sendtokindle/">Send to Kindle</a>, <a href="http://feedly.com/">feedly</a>, <a href="https://agilebits.com/onepassword">1Password</a> and <a href="http://github.com/roberto/gist-io-chrome/">Gist.IO Page Switcher</a>.</p>
+
+<h2>Tools</h2>
+
+<ul>
+<li><a href="http://propaneapp.com/">Propane</a>: <a href="http://campfirenow.com/">Campfire</a> client to work and have fun with human beings.</li>
+<li><a href="http://www.apple.com/itunes/download/">iTunes</a>: Best podcast manager that I&rsquo;ve used so far. It&rsquo;s a music player as well.</li>
+<li><a href="http://www.alfredapp.com/">Alfred</a>: It isn&rsquo;t just an application launcher, it&rsquo;s my personal jack of all trades. I just type Cmd+Space (my custom hotkey for it) and with a few strokes I&rsquo;m able to navigate through folders and files, send email messages, play songs and much more.</li>
+<li><a href="http://mxcl.github.com/homebrew/">Homebrew</a>: package manager to make life easier for developers.</li>
+</ul>
+
+
+<h2>Source Code</h2>
+
+<p><a href="http://git-scm.com/">Git</a> + <a href="http://github.com/">Github</a>/<a href="http://bitbucket.org/">Bitbucket</a>. Besides git command line tools, I use <a href="http://gitx.frim.nl/">GitX</a> to browse through history log and review commits. Just a note: I don&rsquo;t miss SVN and CVS at all.</p>
+
+<h2>Music</h2>
+
+<p>I listen to some random album from my <a href="http://www.apple.com/itunes/download/">iTunes</a> library usually, but when things got serious I listen to <a href="http://emancipator.bandcamp.com/">emancipator</a>, that helps me to focus more.</p>
+
+<h2>Your turn</h2>
+
+<p>So, about you? What are your 7 items?</p>
+
+<ul>
+<li><a href="http://twitter.com/brupm">@brupm</a></li>
+<li><a href="http://twitter.com/danteregis">@danteregis</a></li>
+<li><a href="http://twitter.com/daviscabral">@daviscabral</a></li>
+<li><a href="http://twitter.com/ozeias">@ozeias</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Migrated to Octopress]]></title>
+    <link href="http://blog.robertosoares.me/blog/2012/03/27/migrated-to-octopress/"/>
+    <updated>2012-03-27T23:04:00-03:00</updated>
+    <id>http://blog.robertosoares.me/blog/2012/03/27/migrated-to-octopress</id>
+    <content type="html"><![CDATA[<p>A few weeks ago I hired a VPS to put some personal projects and decided to migrate my blog from Wordpress after reading a blog post of <a href="http://www.almirmendes.com/" title="Almir Mendes">Almir Mendes</a> talking about <a href="http://octopress.org" title="Octopress">Octopress</a>.</p>
+
+<!-- more -->
+
+
+<h2>Hmm&hellip; ok&hellip; so, what is Octopress?</h2>
+
+<p>Imagine a <a href="http://en.wikipedia.org/wiki/Content_management_system" title="Content Management System">CMS</a> with an yml file instead of a dashboard, posts and pages being written in <a href="http://daringfireball.net/projects/markdown/" title="Markdown">plain text format</a> stored in folders/files that allows you to maintain all of it in any version control system, as Git, and deploying so easy as transfering some files to a folder. Sounds good? If &ldquo;yes&rdquo;, <a href="http://octopress.org" title="Octopress">Octopress</a> is for you.</p>
+
+<h2>Easy to install/setup</h2>
+
+<p>If you are a software developer, it&rsquo;s gonna be easy, if a ruby developer, trivial and if non-developer it&rsquo;ll be&hellip; like a puzzle. The <a href="http://octopress.org/docs/" title="Octopress - Documents">documentation</a> is really helpful, covering installation, customization, deploying&hellip; pretty much everything.</p>
+
+<p>As I chose <a href="http://nginx.com/" title="Nginx">Nginx</a>, I used an extra help from <a href="http://blog.bigdinosaur.org/octopress-and-nginx/" title="Octopress and Nginx">Bigdinosaur Blog</a> to setup it correctly.</p>
+
+<h2>What about the old blog?</h2>
+
+<p>I didn&rsquo;t migrate the posts because I&rsquo;m gonna update them before reposting. And the old domain will be redirecting to this one temporally.</p>
+
+<p>So, bye bye Wordpress!</p>
+]]></content>
+  </entry>
+  
+</feed>

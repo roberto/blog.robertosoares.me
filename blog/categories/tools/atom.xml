@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Tools | Roberto Soares]]></title>
+  <link href="http://blog.robertosoares.me/blog/categories/tools/atom.xml" rel="self"/>
+  <link href="http://blog.robertosoares.me/"/>
+  <updated>2013-05-20T18:17:28-03:00</updated>
+  <id>http://blog.robertosoares.me/</id>
+  <author>
+    <name><![CDATA[Roberto Soares]]></name>
+    <email><![CDATA[contact@robertosoares.me]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[My Development Environment in 7 items]]></title>
+    <link href="http://blog.robertosoares.me/blog/2012/08/06/my-development-environment-in-7-items/"/>
+    <updated>2012-08-06T21:50:00-03:00</updated>
+    <id>http://blog.robertosoares.me/blog/2012/08/06/my-development-environment-in-7-items</id>
+    <content type="html"><![CDATA[<p>A few centuries ago <a href="http://www.almirmendes.com/blog/2011/01/20/meu-ambiente-de-trabalho-em-7-itens/">Almir Mendes</a> and <a href="http://jeveaux.com/2011/meu-ambiente-de-trabalho-em-7-itens/">Paulo Jeveaux</a> posted about their development environment in 7 items and I&rsquo;d do the same. So, here it is:</p>
+
+<!-- more -->
+
+
+<h2>Machine/OS</h2>
+
+<p>Mac Mini as my main work machine and a macbook pro when I need mobility.</p>
+
+<p>It&rsquo;s a pleasure to work with Mac OS X and the main reason: it doesn&rsquo;t bother me with many issues that I used to deal with other operating systems. After 5 years using it, I feel at home.</p>
+
+<h2>Editor</h2>
+
+<p><a href="http://www.sublimetext.com/">SublimeText</a> could be seen only as a good editor just for being a <a href="http://macromates.com/">Textmate</a> on steroids and great for many developers, but not for me. However, its <a href="http://www.sublimetext.com/docs/2/vintage.html">vintage mode</a> really got me, since I&rsquo;ve been a <a href="http://www.vim.org/">Vim</a> user for years, plus its customization and look and feel are superb.</p>
+
+<h2>Terminal</h2>
+
+<p>Bash + Terminal.app. In addition, currently I&rsquo;m trying <a href="http://www.iterm2.com/">iTerm2</a>, so far, so good.</p>
+
+<h2>Browser</h2>
+
+<p><a href="http://www.google.com/chrome">Chrome</a> with the following extensions: <a href="https://chrome.google.com/webstore/detail/cajhjefnbkonbapdnfbolcehblmcipnf">Delicious Bookmarks</a>, <a href="https://chrome.google.com/webstore/detail/aonjhmdcgbgikgjapjckfkefpphjpgma">MeasureIt!</a>, <a href="https://chrome.google.com/webstore/detail/cpngackimfmofbokmjmljamhdncknpmg">Screen Capture</a>, <a href="http://www.klip.me/sendtokindle/">Send to Kindle</a>, <a href="http://feedly.com/">feedly</a>, <a href="https://agilebits.com/onepassword">1Password</a> and <a href="http://github.com/roberto/gist-io-chrome/">Gist.IO Page Switcher</a>.</p>
+
+<h2>Tools</h2>
+
+<ul>
+<li><a href="http://propaneapp.com/">Propane</a>: <a href="http://campfirenow.com/">Campfire</a> client to work and have fun with human beings.</li>
+<li><a href="http://www.apple.com/itunes/download/">iTunes</a>: Best podcast manager that I&rsquo;ve used so far. It&rsquo;s a music player as well.</li>
+<li><a href="http://www.alfredapp.com/">Alfred</a>: It isn&rsquo;t just an application launcher, it&rsquo;s my personal jack of all trades. I just type Cmd+Space (my custom hotkey for it) and with a few strokes I&rsquo;m able to navigate through folders and files, send email messages, play songs and much more.</li>
+<li><a href="http://mxcl.github.com/homebrew/">Homebrew</a>: package manager to make life easier for developers.</li>
+</ul>
+
+
+<h2>Source Code</h2>
+
+<p><a href="http://git-scm.com/">Git</a> + <a href="http://github.com/">Github</a>/<a href="http://bitbucket.org/">Bitbucket</a>. Besides git command line tools, I use <a href="http://gitx.frim.nl/">GitX</a> to browse through history log and review commits. Just a note: I don&rsquo;t miss SVN and CVS at all.</p>
+
+<h2>Music</h2>
+
+<p>I listen to some random album from my <a href="http://www.apple.com/itunes/download/">iTunes</a> library usually, but when things got serious I listen to <a href="http://emancipator.bandcamp.com/">emancipator</a>, that helps me to focus more.</p>
+
+<h2>Your turn</h2>
+
+<p>So, about you? What are your 7 items?</p>
+
+<ul>
+<li><a href="http://twitter.com/brupm">@brupm</a></li>
+<li><a href="http://twitter.com/danteregis">@danteregis</a></li>
+<li><a href="http://twitter.com/daviscabral">@daviscabral</a></li>
+<li><a href="http://twitter.com/ozeias">@ozeias</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

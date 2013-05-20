@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Rails | Roberto Soares]]></title>
+  <link href="http://blog.robertosoares.me/blog/categories/rails/atom.xml" rel="self"/>
+  <link href="http://blog.robertosoares.me/"/>
+  <updated>2013-05-20T18:17:28-03:00</updated>
+  <id>http://blog.robertosoares.me/</id>
+  <author>
+    <name><![CDATA[Roberto Soares]]></name>
+    <email><![CDATA[contact@robertosoares.me]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Integrating Twitter Bootstrap with Ruby on Rails]]></title>
+    <link href="http://blog.robertosoares.me/blog/2012/08/17/integrating-twitter-bootstrap-with-ruby-on-rails/"/>
+    <updated>2012-08-17T12:01:00-03:00</updated>
+    <id>http://blog.robertosoares.me/blog/2012/08/17/integrating-twitter-bootstrap-with-ruby-on-rails</id>
+    <content type="html"><![CDATA[<p><a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> is a HTML, JS, CSS toolkit <a href="http://news.ycombinator.com/item?id=3536291">loved, hated</a> and <a href="http://builtwithbootstrap.com/">used by many developers</a>. As any tool, it can be useful for you in certain cases and, in this post, I will show how to smoothly integrate it with Ruby on Rails:</p>
+
+<ul>
+<li>Initial Setup</li>
+<li>Bootstrap Themes</li>
+<li>Form Builders</li>
+<li>Navigation Bar DSL</li>
+<li>Flash Messages</li>
+<li>Pagination</li>
+<li>Avoiding dependency</li>
+</ul>
+
+
+<!-- more -->
+
+
+<h2>Initial Setup</h2>
+
+<p>Instead of downloading <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> from its project page and adapting it to Rails, there are several gems to get you going fast and as bonus, CSS extensions with <a href="http://lesscss.org/">LESS</a> or <a href="http://sass-lang.com/">Sass</a>.</p>
+
+<p>As <a href="http://sass-lang.com/">Sass</a> is default in Rails, I prefer to use <a href="https://github.com/thomas-mcdonald/bootstrap-sass/">bootstrap-sass</a>. <a href="https://github.com/metaskills/less-rails-bootstrap/">less-rails-bootstrap</a> is an option If you want to use <a href="http://lesscss.org/">LESS</a>.</p>
+
+<h2>Bootstrap Themes</h2>
+
+<p><a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> is easly customizable through its <a href="http://twitter.github.com/bootstrap/less.html#variables">variables and mixins using LESS</a>. It can also be done with <a href="https://github.com/thomas-mcdonald/bootstrap-sass/">bootstrap-sass</a> using the same names for <a href="https://github.com/thomas-mcdonald/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/_variables.scss">variables</a> and <a href="https://github.com/thomas-mcdonald/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/_mixins.scss">mixins</a>.</p>
+
+<p>But if there isn&rsquo;t time or the need to customizing colors, fonts, etc, you can use a free theme from <a href="http://bootswatch.com/">Bootswatch</a>. There some good options and <a href="https://github.com/maxim/bootswatch-rails">bootswatch-rails</a> which makes it even easier if you are using <a href="http://sass-lang.com/">Sass</a>.</p>
+
+<h2>Form Builders</h2>
+
+<p>Some options: <a href="https://github.com/mjbellantoni/formtastic-bootstrap">formtastic-bootstrap</a> for <a href="https://github.com/justinfrench/formtastic">formtastic</a>, a builtin generator for <a href="https://github.com/plataformatec/simple_form">simple_form</a> and a specified form builder called <a href="https://github.com/potenza/bootstrap_form">bootstrap_form</a>. I use <a href="https://github.com/plataformatec/simple_form">simple_form</a>, installing it with bootstrap option:</p>
+
+<p><code>
+rails generate simple_form:install --bootstrap
+</code></p>
+
+<h2>Navigation Bar DSL</h2>
+
+<p>The reason why I use <a href="https://github.com/julescopeland/Rails-Bootstrap-Navbar">Rails-Bootstrap-Navbar</a>:</p>
+
+<p><code>diff
++&lt;%= nav_bar fixed: :top, brand: "Lentlist", responsive: true %&gt;
+-&lt;div class="navbar navbar-fixed-top"&gt;
+-  &lt;div class="navbar-inner"&gt;
+-    &lt;div class="container"&gt;
+-      &lt;a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"&gt;
+-        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+-        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+-        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+-      &lt;/a&gt;
+-      &lt;%= link_to "Lentlist", root_path, class: "brand" %&gt;
+-      &lt;div class="nav-collapse"&gt;
+-        &lt;ul class="nav"&gt;
+-        &lt;/ul&gt;
+-      &lt;/div&gt;
+-    &lt;/div&gt;
+-  &lt;/div&gt;
+-&lt;/div&gt;
+</code></p>
+
+<h2>Flash Messages</h2>
+
+<p>There are <a href="http://twitter.github.com/bootstrap/components.html#alerts">4 kind of alerts</a> in <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>: alert-success, alert-error, alert-block and alert-info. So you&rsquo;ll need to set the right CSS class for each flash message type. A solution is to create a helper like this one:</p>
+
+<p>``` ruby
+module ApplicationHelper</p>
+
+<p>  def bootstrap_class_for flash_type</p>
+
+<pre><code>case flash_type
+  when :success
+    "alert-success"
+  when :error
+    "alert-error"
+  when :alert
+    "alert-block"
+  when :notice
+    "alert-info"
+  else
+    flash_type.to_s
+end
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<p>For the rest of this solution: <a href="https://gist.github.com/3344628">Rails flash messages using Twitter Bootstrap</a>.</p>
+
+<h2>Pagination</h2>
+
+<p>The <a href="https://www.ruby-toolbox.com/categories/pagination">most popular pagination libraries</a> with support for Ruby on Rails are <a href="https://github.com/mislav/will_paginate">will_paginate</a> and <a href="https://github.com/amatsuda/kaminari">kaminari</a> and it&rsquo;s easy to find some projects to style them with <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>, but you can do this on your own.</p>
+
+<p>An option for <a href="https://github.com/amatsuda/kaminari">kaminari</a> is to download the views from <a href="https://github.com/gabetax/twitter-bootstrap-kaminari-views/downloads">twitter-bootstrap-kaminari-views</a> and put in your project. For <a href="https://github.com/mislav/will_paginate">will_paginate</a>, it&rsquo;s just to install <a href="https://github.com/yrgoldteeth/bootstrap-will_paginate">bootstrap-will_paginate</a>.</p>
+
+<h2>Avoiding dependency</h2>
+
+<p>Independently of the way you choose to use <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>, <a href="http://ruby.bvision.com/blog/please-stop-embedding-bootstrap-classes-in-your-html">avoid embedding Bootstrap classes in your HTML</a>, use inheritance and mixins to create your own classes using bootstrap classes. For instance:</p>
+
+<p>``` erb
+<body class="container">
+  &lt;%= render partial: &lsquo;shared/nav&rsquo; %>
+  <div class="row"></p>
+
+<pre><code>&lt;div class="span7"&gt;
+  &lt;%= render partial: 'shared/flash_messages', flash: flash %&gt; 
+  &lt;%= yield %&gt;
+&lt;/div&gt;
+&lt;div class="span3 offset2"&gt;
+  &lt;%= render partial: 'shared/sidebar' %&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>  </div>
+  <hr/>
+  <footer>Footer</footer>
+</body>
+```</p>
+
+<p>Instead of <code>span*</code>, <code>row</code>, <code>offset*</code> and <code>container</code>, use semantic classes:</p>
+
+<p>```
+<body>
+  &lt;%= render partial: &lsquo;shared/nav&rsquo; %>
+  <div class="content"></p>
+
+<pre><code>&lt;div class="main"&gt;
+  &lt;%= render partial: 'shared/flash_messages', flash: flash %&gt;
+  &lt;%= yield %&gt;
+&lt;/div&gt;
+&lt;div class="sidebar"&gt;
+  &lt;%= render partial: 'shared/sidebar' %&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>  </div>
+  <hr/>
+  <footer>Footer</footer>
+```</p>
+
+<p>And use <a href="http://sass-lang.com/">Sass</a> or <a href="http://lesscss.org/">LESS</a> to define your classes. A <a href="http://sass-lang.com/">Sass</a> example:</p>
+
+<p>``` sass
+body
+  @extend .container</p>
+
+<p>.content
+  @include makeRow()</p>
+
+<p>.content .main
+  @include makeColumn(8)</p>
+
+<p>.content .sidebar
+  @include makeColumn(4, 2)
+```</p>
+
+<p>This way the CSS classes are easier to understand and it will be easier to change the CSS Framework or upgrade <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> when needed.</p>
+
+<h2>For more information</h2>
+
+<ul>
+<li><a href="http://railsapps.github.com/twitter-bootstrap-rails.html">RailsApps Project: Twitter Bootstrap and Rails</a></li>
+<li><a href="http://railscasts.com/episodes/328-twitter-bootstrap-basics">RailsCasts: Twitter Bootstrap Basics</a></li>
+<li><a href="http://ruby.bvision.com/blog/please-stop-embedding-bootstrap-classes-in-your-html">Please stop embedding Bootstrap classes in your HTML!</a></li>
+<li><a href="https://github.com/roberto/lentlist/tree/bootstrap">Lentlist: example application</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

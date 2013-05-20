@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ruby | Roberto Soares]]></title>
+  <link href="http://blog.robertosoares.me/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://blog.robertosoares.me/"/>
+  <updated>2013-05-20T18:17:28-03:00</updated>
+  <id>http://blog.robertosoares.me/</id>
+  <author>
+    <name><![CDATA[Roberto Soares]]></name>
+    <email><![CDATA[contact@robertosoares.me]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Improving Your Ruby Programming Skills by Watching]]></title>
+    <link href="http://blog.robertosoares.me/blog/2012/08/28/improving-your-ruby-programming-skills-by-watching/"/>
+    <updated>2012-08-28T16:45:00-03:00</updated>
+    <id>http://blog.robertosoares.me/blog/2012/08/28/improving-your-ruby-programming-skills-by-watching</id>
+    <content type="html"><![CDATA[<p>A list with some great screencasts resources about Ruby.</p>
+
+<!-- more -->
+
+
+<h2><a href="http://confreaks.com/events">Confreaks</a></h2>
+
+<p>You couldn&rsquo;t make it to that great conference, maybe you can find it on <a href="http://confreaks.com/events">Confreaks</a>. There are 54 events at the time I am writing this post, most of them Ruby related covering a great variety of topics.</p>
+
+<p>As <a href="http://www.rubyconf.com.br/">RubyConf Brasil</a> is the only big conference that I used to go, for everything else there&rsquo;s Confreaks, videos are available for free.</p>
+
+<h2><a href="http://peepcode.com/">PeepCode</a></h2>
+
+<p>&ldquo;Get the newest and hottest development resources from PeepCode, well before they’re covered in books&rdquo; described well their one-hour tutorials, $12 each.</p>
+
+<p>Besides the tutorials, there is the exceptional <a href="https://peepcode.com/screencasts/play-by-play">Play by Play series</a> where you can watch experts working in some task given by <a href="https://twitter.com/topfunky">Geoffrey Grosenbach</a>.</p>
+
+<h2><a href="http://www.destroyallsoftware.com/screencasts">Destroy All Software</a></h2>
+
+<p>Screencasts covering Unix, Testing, OO Design, Git, Vim and dynamic languages (with a Ruby focus), $9/month.</p>
+
+<p><a href="https://twitter.com/garybernhardt">Gary Bernhardt</a> was the first invited expert to the <a href="https://peepcode.com/screencasts/play-by-play">Play by Play series</a> and I think he liked, since he has already produced more than 70 screencasts after that.</p>
+
+<p>Watching his screencasts is like having another developer in the team giving you some great tips and advices.</p>
+
+<h2><a href="http://railscasts.com/">RailsCasts</a></h2>
+
+<p>Screencasts about Rails and related projects and techniques. There are free, revised and pro episodes. The last two are only available for RailsCast Pro subscribers, $9/month. There is a transcription and a github repository for each episode.</p>
+
+<p>Ryan Bates has been doing a great work covering a lot of projects, some of them I&rsquo;ve heard about first from his screencasts.</p>
+
+<h2>Extras</h2>
+
+<ul>
+<li><a href="http://www.infoq.com/bycategory/contentbycategory.action?idx=3&amp;alias=ruby&amp;ct=5">InfoQ: Presentations about Ruby</a></li>
+<li><a href="http://codeschool.com">Code School</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

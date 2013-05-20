@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Blogging | Roberto Soares]]></title>
+  <link href="http://blog.robertosoares.me/blog/categories/blogging/atom.xml" rel="self"/>
+  <link href="http://blog.robertosoares.me/"/>
+  <updated>2013-05-20T18:17:28-03:00</updated>
+  <id>http://blog.robertosoares.me/</id>
+  <author>
+    <name><![CDATA[Roberto Soares]]></name>
+    <email><![CDATA[contact@robertosoares.me]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Migrated to Octopress]]></title>
+    <link href="http://blog.robertosoares.me/blog/2012/03/27/migrated-to-octopress/"/>
+    <updated>2012-03-27T23:04:00-03:00</updated>
+    <id>http://blog.robertosoares.me/blog/2012/03/27/migrated-to-octopress</id>
+    <content type="html"><![CDATA[<p>A few weeks ago I hired a VPS to put some personal projects and decided to migrate my blog from Wordpress after reading a blog post of <a href="http://www.almirmendes.com/" title="Almir Mendes">Almir Mendes</a> talking about <a href="http://octopress.org" title="Octopress">Octopress</a>.</p>
+
+<!-- more -->
+
+
+<h2>Hmm&hellip; ok&hellip; so, what is Octopress?</h2>
+
+<p>Imagine a <a href="http://en.wikipedia.org/wiki/Content_management_system" title="Content Management System">CMS</a> with an yml file instead of a dashboard, posts and pages being written in <a href="http://daringfireball.net/projects/markdown/" title="Markdown">plain text format</a> stored in folders/files that allows you to maintain all of it in any version control system, as Git, and deploying so easy as transfering some files to a folder. Sounds good? If &ldquo;yes&rdquo;, <a href="http://octopress.org" title="Octopress">Octopress</a> is for you.</p>
+
+<h2>Easy to install/setup</h2>
+
+<p>If you are a software developer, it&rsquo;s gonna be easy, if a ruby developer, trivial and if non-developer it&rsquo;ll be&hellip; like a puzzle. The <a href="http://octopress.org/docs/" title="Octopress - Documents">documentation</a> is really helpful, covering installation, customization, deploying&hellip; pretty much everything.</p>
+
+<p>As I chose <a href="http://nginx.com/" title="Nginx">Nginx</a>, I used an extra help from <a href="http://blog.bigdinosaur.org/octopress-and-nginx/" title="Octopress and Nginx">Bigdinosaur Blog</a> to setup it correctly.</p>
+
+<h2>What about the old blog?</h2>
+
+<p>I didn&rsquo;t migrate the posts because I&rsquo;m gonna update them before reposting. And the old domain will be redirecting to this one temporally.</p>
+
+<p>So, bye bye Wordpress!</p>
+]]></content>
+  </entry>
+  
+</feed>

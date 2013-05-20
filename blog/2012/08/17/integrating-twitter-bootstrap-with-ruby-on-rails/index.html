@@ -1,0 +1,568 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Integrating Twitter Bootstrap with Ruby on Rails - Roberto Soares</title>
+  <meta name="author" content="Roberto Soares">
+
+  
+  <meta name="description" content="Twitter Bootstrap is a HTML, JS, CSS toolkit loved, hated and used by many developers. As any tool, it can be useful for you in certain cases and, in &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.robertosoares.me/blog/2012/08/17/integrating-twitter-bootstrap-with-ruby-on-rails/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+   <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="http://feeds.feedburner.com/robertosoares/blog" rel="alternate" title="Roberto Soares" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-30168975-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+</hgroup>
+
+</header>
+  <!-- <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="http://feeds.feedburner.com/robertosoares/blog" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.robertosoares.me" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav> -->
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Integrating Twitter Bootstrap With Ruby on Rails</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-17T12:01:00-03:00" pubdate data-updated="true">Aug 17<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> is a HTML, JS, CSS toolkit <a href="http://news.ycombinator.com/item?id=3536291">loved, hated</a> and <a href="http://builtwithbootstrap.com/">used by many developers</a>. As any tool, it can be useful for you in certain cases and, in this post, I will show how to smoothly integrate it with Ruby on Rails:</p>
+
+<ul>
+<li>Initial Setup</li>
+<li>Bootstrap Themes</li>
+<li>Form Builders</li>
+<li>Navigation Bar DSL</li>
+<li>Flash Messages</li>
+<li>Pagination</li>
+<li>Avoiding dependency</li>
+</ul>
+
+
+<!-- more -->
+
+
+<h2>Initial Setup</h2>
+
+<p>Instead of downloading <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> from its project page and adapting it to Rails, there are several gems to get you going fast and as bonus, CSS extensions with <a href="http://lesscss.org/">LESS</a> or <a href="http://sass-lang.com/">Sass</a>.</p>
+
+<p>As <a href="http://sass-lang.com/">Sass</a> is default in Rails, I prefer to use <a href="https://github.com/thomas-mcdonald/bootstrap-sass/">bootstrap-sass</a>. <a href="https://github.com/metaskills/less-rails-bootstrap/">less-rails-bootstrap</a> is an option If you want to use <a href="http://lesscss.org/">LESS</a>.</p>
+
+<h2>Bootstrap Themes</h2>
+
+<p><a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> is easly customizable through its <a href="http://twitter.github.com/bootstrap/less.html#variables">variables and mixins using LESS</a>. It can also be done with <a href="https://github.com/thomas-mcdonald/bootstrap-sass/">bootstrap-sass</a> using the same names for <a href="https://github.com/thomas-mcdonald/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/_variables.scss">variables</a> and <a href="https://github.com/thomas-mcdonald/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/_mixins.scss">mixins</a>.</p>
+
+<p>But if there isn&rsquo;t time or the need to customizing colors, fonts, etc, you can use a free theme from <a href="http://bootswatch.com/">Bootswatch</a>. There some good options and <a href="https://github.com/maxim/bootswatch-rails">bootswatch-rails</a> which makes it even easier if you are using <a href="http://sass-lang.com/">Sass</a>.</p>
+
+<h2>Form Builders</h2>
+
+<p>Some options: <a href="https://github.com/mjbellantoni/formtastic-bootstrap">formtastic-bootstrap</a> for <a href="https://github.com/justinfrench/formtastic">formtastic</a>, a builtin generator for <a href="https://github.com/plataformatec/simple_form">simple_form</a> and a specified form builder called <a href="https://github.com/potenza/bootstrap_form">bootstrap_form</a>. I use <a href="https://github.com/plataformatec/simple_form">simple_form</a>, installing it with bootstrap option:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rails generate simple_form:install --bootstrap</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Navigation Bar DSL</h2>
+
+<p>The reason why I use <a href="https://github.com/julescopeland/Rails-Bootstrap-Navbar">Rails-Bootstrap-Navbar</a>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='diff'><span class='line'><span class="gi">+&lt;%= nav_bar fixed: :top, brand: &quot;Lentlist&quot;, responsive: true %&gt;</span>
+</span><span class='line'><span class="gd">-&lt;div class=&quot;navbar navbar-fixed-top&quot;&gt;</span>
+</span><span class='line'><span class="gd">-  &lt;div class=&quot;navbar-inner&quot;&gt;</span>
+</span><span class='line'><span class="gd">-    &lt;div class=&quot;container&quot;&gt;</span>
+</span><span class='line'><span class="gd">-      &lt;a class=&quot;btn btn-navbar&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.nav-collapse&quot;&gt;</span>
+</span><span class='line'><span class="gd">-        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;</span>
+</span><span class='line'><span class="gd">-        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;</span>
+</span><span class='line'><span class="gd">-        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;</span>
+</span><span class='line'><span class="gd">-      &lt;/a&gt;</span>
+</span><span class='line'><span class="gd">-      &lt;%= link_to &quot;Lentlist&quot;, root_path, class: &quot;brand&quot; %&gt;</span>
+</span><span class='line'><span class="gd">-      &lt;div class=&quot;nav-collapse&quot;&gt;</span>
+</span><span class='line'><span class="gd">-        &lt;ul class=&quot;nav&quot;&gt;</span>
+</span><span class='line'><span class="gd">-        &lt;/ul&gt;</span>
+</span><span class='line'><span class="gd">-      &lt;/div&gt;</span>
+</span><span class='line'><span class="gd">-    &lt;/div&gt;</span>
+</span><span class='line'><span class="gd">-  &lt;/div&gt;</span>
+</span><span class='line'><span class="gd">-&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Flash Messages</h2>
+
+<p>There are <a href="http://twitter.github.com/bootstrap/components.html#alerts">4 kind of alerts</a> in <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>: alert-success, alert-error, alert-block and alert-info. So you&rsquo;ll need to set the right CSS class for each flash message type. A solution is to create a helper like this one:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">module</span> <span class="nn">ApplicationHelper</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">bootstrap_class_for</span> <span class="n">flash_type</span>
+</span><span class='line'>    <span class="k">case</span> <span class="n">flash_type</span>
+</span><span class='line'>      <span class="k">when</span> <span class="ss">:success</span>
+</span><span class='line'>        <span class="s2">&quot;alert-success&quot;</span>
+</span><span class='line'>      <span class="k">when</span> <span class="ss">:error</span>
+</span><span class='line'>        <span class="s2">&quot;alert-error&quot;</span>
+</span><span class='line'>      <span class="k">when</span> <span class="ss">:alert</span>
+</span><span class='line'>        <span class="s2">&quot;alert-block&quot;</span>
+</span><span class='line'>      <span class="k">when</span> <span class="ss">:notice</span>
+</span><span class='line'>        <span class="s2">&quot;alert-info&quot;</span>
+</span><span class='line'>      <span class="k">else</span>
+</span><span class='line'>        <span class="n">flash_type</span><span class="o">.</span><span class="n">to_s</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>For the rest of this solution: <a href="https://gist.github.com/3344628">Rails flash messages using Twitter Bootstrap</a>.</p>
+
+<h2>Pagination</h2>
+
+<p>The <a href="https://www.ruby-toolbox.com/categories/pagination">most popular pagination libraries</a> with support for Ruby on Rails are <a href="https://github.com/mislav/will_paginate">will_paginate</a> and <a href="https://github.com/amatsuda/kaminari">kaminari</a> and it&rsquo;s easy to find some projects to style them with <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>, but you can do this on your own.</p>
+
+<p>An option for <a href="https://github.com/amatsuda/kaminari">kaminari</a> is to download the views from <a href="https://github.com/gabetax/twitter-bootstrap-kaminari-views/downloads">twitter-bootstrap-kaminari-views</a> and put in your project. For <a href="https://github.com/mislav/will_paginate">will_paginate</a>, it&rsquo;s just to install <a href="https://github.com/yrgoldteeth/bootstrap-will_paginate">bootstrap-will_paginate</a>.</p>
+
+<h2>Avoiding dependency</h2>
+
+<p>Independently of the way you choose to use <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>, <a href="http://ruby.bvision.com/blog/please-stop-embedding-bootstrap-classes-in-your-html">avoid embedding Bootstrap classes in your HTML</a>, use inheritance and mixins to create your own classes using bootstrap classes. For instance:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='erb'><span class='line'><span class="x">&lt;body class=&quot;container&quot;&gt;</span>
+</span><span class='line'><span class="x">  </span><span class="cp">&lt;%=</span> <span class="n">render</span> <span class="n">partial</span><span class="p">:</span> <span class="s1">&#39;shared/nav&#39;</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">  &lt;div class=&quot;row&quot;&gt;</span>
+</span><span class='line'><span class="x">    &lt;div class=&quot;span7&quot;&gt;</span>
+</span><span class='line'><span class="x">      </span><span class="cp">&lt;%=</span> <span class="n">render</span> <span class="n">partial</span><span class="p">:</span> <span class="s1">&#39;shared/flash_messages&#39;</span><span class="p">,</span> <span class="n">flash</span><span class="p">:</span> <span class="n">flash</span> <span class="cp">%&gt;</span><span class="x"> </span>
+</span><span class='line'><span class="x">      </span><span class="cp">&lt;%=</span> <span class="k">yield</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">    &lt;/div&gt;</span>
+</span><span class='line'><span class="x">    &lt;div class=&quot;span3 offset2&quot;&gt;</span>
+</span><span class='line'><span class="x">      </span><span class="cp">&lt;%=</span> <span class="n">render</span> <span class="n">partial</span><span class="p">:</span> <span class="s1">&#39;shared/sidebar&#39;</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">    &lt;/div&gt;</span>
+</span><span class='line'><span class="x">  &lt;/div&gt;</span>
+</span><span class='line'><span class="x">  &lt;hr/&gt;</span>
+</span><span class='line'><span class="x">  &lt;footer&gt;Footer&lt;/footer&gt;</span>
+</span><span class='line'><span class="x">&lt;/body&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Instead of <code>span*</code>, <code>row</code>, <code>offset*</code> and <code>container</code>, use semantic classes:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='erb'><span class='line'><span class="x">&lt;body&gt;</span>
+</span><span class='line'><span class="x">  </span><span class="cp">&lt;%=</span> <span class="n">render</span> <span class="n">partial</span><span class="p">:</span> <span class="s1">&#39;shared/nav&#39;</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">  &lt;div class=&quot;content&quot;&gt;</span>
+</span><span class='line'><span class="x">    &lt;div class=&quot;main&quot;&gt;</span>
+</span><span class='line'><span class="x">      </span><span class="cp">&lt;%=</span> <span class="n">render</span> <span class="n">partial</span><span class="p">:</span> <span class="s1">&#39;shared/flash_messages&#39;</span><span class="p">,</span> <span class="n">flash</span><span class="p">:</span> <span class="n">flash</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">      </span><span class="cp">&lt;%=</span> <span class="k">yield</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">    &lt;/div&gt;</span>
+</span><span class='line'><span class="x">    &lt;div class=&quot;sidebar&quot;&gt;</span>
+</span><span class='line'><span class="x">      </span><span class="cp">&lt;%=</span> <span class="n">render</span> <span class="n">partial</span><span class="p">:</span> <span class="s1">&#39;shared/sidebar&#39;</span> <span class="cp">%&gt;</span><span class="x"></span>
+</span><span class='line'><span class="x">    &lt;/div&gt;</span>
+</span><span class='line'><span class="x">  &lt;/div&gt;</span>
+</span><span class='line'><span class="x">  &lt;hr/&gt;</span>
+</span><span class='line'><span class="x">  &lt;footer&gt;Footer&lt;/footer&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And use <a href="http://sass-lang.com/">Sass</a> or <a href="http://lesscss.org/">LESS</a> to define your classes. A <a href="http://sass-lang.com/">Sass</a> example:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="nt">body</span>
+</span><span class='line'>  <span class="k">@extend</span> <span class="nc">.container</span>
+</span><span class='line'>
+</span><span class='line'><span class="nc">.content</span>
+</span><span class='line'>  <span class="k">@include</span><span class="nd"> makeRow</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="nc">.content</span> <span class="nc">.main</span>
+</span><span class='line'>  <span class="k">@include</span><span class="nd"> makeColumn</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="nc">.content</span> <span class="nc">.sidebar</span>
+</span><span class='line'>  <span class="k">@include</span><span class="nd"> makeColumn</span><span class="p">(</span><span class="mi">4</span><span class="o">,</span> <span class="mi">2</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This way the CSS classes are easier to understand and it will be easier to change the CSS Framework or upgrade <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> when needed.</p>
+
+<h2>For more information</h2>
+
+<ul>
+<li><a href="http://railsapps.github.com/twitter-bootstrap-rails.html">RailsApps Project: Twitter Bootstrap and Rails</a></li>
+<li><a href="http://railscasts.com/episodes/328-twitter-bootstrap-basics">RailsCasts: Twitter Bootstrap Basics</a></li>
+<li><a href="http://ruby.bvision.com/blog/please-stop-embedding-bootstrap-classes-in-your-html">Please stop embedding Bootstrap classes in your HTML!</a></li>
+<li><a href="https://github.com/roberto/lentlist/tree/bootstrap">Lentlist: example application</a></li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Roberto Soares</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-17T12:01:00-03:00" pubdate data-updated="true">Aug 17<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/rails/'>Rails</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://blog.robertosoares.me/blog/2012/08/17/integrating-twitter-bootstrap-with-ruby-on-rails/" data-via="bt1" data-counturl="http://blog.robertosoares.me/blog/2012/08/17/integrating-twitter-bootstrap-with-ruby-on-rails/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/08/08/testing-chrome-extensions-with-jasmine/" title="Previous Post: Testing Chrome Extensions with Jasmine">&laquo; Testing Chrome Extensions with Jasmine</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/08/28/improving-your-ruby-programming-skills-by-watching/" title="Next Post: Improving Your Ruby Programming Skills by Watching">Improving Your Ruby Programming Skills by Watching &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <ul id="recent_posts">
+      <li class="post">
+      <a href="http://blog.robertosoares.me" alt="Home"><img src="/images/Home.png"></a>
+      <a href="http://blog.robertosoares.me/archives/" alt="Archives"><img src="/images/Calendar.png"></a>
+      <a href="mailto:contact@robertosoares.me" alt="E-Mail"><img src="/images/Envelope.png"></a>
+      <a href="http://feeds.feedburner.com/robertosoares/blog" alt="subscribe feed"><img src="/images/rss_big.png"></a>
+      </li>
+  </ul>
+</section>
+<section>
+  <h1>About Me</h1>
+  <p>Roberto Soares, passionate developer, ruby lover, mac user and agile enthusiast. <a href="http://robertosoares.me/">More about me</a> and <a href="http://resume.linkedinlabs.com/k61po2u36/">résumé</a>.</p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/11/25/conferencias-2012/">Conferências 2012</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/28/improving-your-ruby-programming-skills-by-watching/">Improving Your Ruby Programming Skills by Watching</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/17/integrating-twitter-bootstrap-with-ruby-on-rails/">Integrating Twitter Bootstrap with Ruby on Rails</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/08/testing-chrome-extensions-with-jasmine/">Testing Chrome Extensions with Jasmine</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/06/my-development-environment-in-7-items/">My Development Environment in 7 items</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/roberto">@roberto</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'roberto',
+            count: 0,
+            skip_forks: false,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("bt1", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/bt1" class="twitter-follow-button" data-show-count="false">Follow @bt1</a>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/bt1?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/bt1">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Roberto Soares -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'blog-roberto';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.robertosoares.me/blog/2012/08/17/integrating-twitter-bootstrap-with-ruby-on-rails/';
+        var disqus_url = 'http://blog.robertosoares.me/blog/2012/08/17/integrating-twitter-bootstrap-with-ruby-on-rails/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
