@@ -2,50 +2,50 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://blog.robertosoares.me/blog/2012/03/27/migrated-to-octopress/</loc>
-        <lastmod>2013-05-20T18:16:32-03:00</lastmod>
+        <lastmod>2013-05-21T13:29:28-03:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.robertosoares.me/blog/2012/08/06/my-development-environment-in-7-items/
         </loc>
-        <lastmod>2013-05-20T18:16:32-03:00</lastmod>
+        <lastmod>2013-05-21T13:29:28-03:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.robertosoares.me/blog/2012/08/08/testing-chrome-extensions-with-jasmine/
         </loc>
-        <lastmod>2013-05-20T18:16:32-03:00</lastmod>
+        <lastmod>2013-05-21T13:29:28-03:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.robertosoares.me/blog/2012/08/17/integrating-twitter-bootstrap-with-ruby-on-rails/
         </loc>
-        <lastmod>2013-05-20T18:16:32-03:00</lastmod>
+        <lastmod>2013-05-21T13:29:28-03:00</lastmod>
     </url>
     <url>
         <loc>
             http://blog.robertosoares.me/blog/2012/08/28/improving-your-ruby-programming-skills-by-watching/
         </loc>
-        <lastmod>2013-05-20T18:16:32-03:00</lastmod>
+        <lastmod>2013-05-21T13:29:28-03:00</lastmod>
     </url>
     <url>
         <loc>http://blog.robertosoares.me/blog/2012/11/25/conferencias-2012/</loc>
-        <lastmod>2013-05-20T18:16:32-03:00</lastmod>
+        <lastmod>2013-05-21T13:29:28-03:00</lastmod>
     </url>
     <url>
         <loc>http://blog.robertosoares.me/archives/</loc>
-        <lastmod>2013-05-20T18:16:32-03:00</lastmod>
+        <lastmod>2013-05-21T13:29:28-03:00</lastmod>
     </url>
     <url>
         <loc>http://blog.robertosoares.me/blog/archives/</loc>
-        <lastmod>2013-05-20T18:16:32-03:00</lastmod>
+        <lastmod>2013-05-21T13:29:28-03:00</lastmod>
     </url>
     <url>
         <loc>http://blog.robertosoares.me/</loc>
-        <lastmod>2013-05-20T18:16:32-03:00</lastmod>
+        <lastmod>2013-05-21T13:29:28-03:00</lastmod>
     </url>
     <url>
         <loc>http://blog.robertosoares.me/robots.txt</loc>
-        <lastmod>2013-05-20T17:15:49-03:00</lastmod>
+        <lastmod>2013-05-21T10:08:03-03:00</lastmod>
     </url>
 </urlset>
